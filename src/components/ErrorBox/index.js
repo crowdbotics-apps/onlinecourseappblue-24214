@@ -1,14 +1,14 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, Layout } from "react-native-ui-kitten";
 
 import styles from "./styles";
 
 export default function ErrorBox({ errorText }) {
   return (
-    <View style={styles.container}>
-      <Text styles={styles.errorText}>
+    <Layout style={styles.container}>
+      <Text category="s1" status="danger" styles={styles.errorText}>
         {errorText}
       </Text>
-    </View>
+    </Layout>
   );
 }

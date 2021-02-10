@@ -22,7 +22,7 @@ def create_homepage(apps, schema_editor):
 
 def create_site(apps, schema_editor):
     Site = apps.get_model("sites", "Site")
-    custom_domain = "onlinecourseappblue-24214.botics.co"
+    custom_domain = "onlinecourseappblue-15214.botics.co"
 
     site_params = {
         "name": "OnlineCourseAppBlueprint",

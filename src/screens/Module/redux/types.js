@@ -1,0 +1,9 @@
+export const ENROLL_COURSE = 'OCA/Module/ENROLL_COURSE';
+export const ENROLL_COURSE_SUCCESS = 'OCA/Module/ENROLL_COURSE_SUCCESS';
+export const ENROLL_COURSE_FAILURE = 'OCA/Module/ENROLL_COURSE_FAILURE';
+
+export const GET_LESSONS = 'OCA/Module/GET_LESSONS';
+export const GET_LESSONS_SUCCESS = 'OCA/Module/GET_LESSONS_SUCCESS';
+export const GET_LESSONS_FAILURE = 'OCA/Module/GET_LESSONS_FAILURE';
+
+export const RESET = 'OCA/Module/RESET';

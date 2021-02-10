@@ -1,0 +1,10 @@
+export const REQUEST_PASSWORD_RESET =
+    'OCA/ForgotPassword/REQUEST_PASSWORD_RESET';
+export const REQUEST_PASSWORD_RESET_SUCCESS =
+    'OCA/ForgotPassword/REQUEST_PASSWORD_RESET_SUCCESS';
+export const REQUEST_PASSWORD_RESET_FAILURE =
+    'OCA/ForgotPassword/REQUEST_PASSWORD_RESET_FAILURE';
+
+export const VERIFY_PASSWORD_RESET = 'OCA/ForgotPassword/VERIFY_PASSWORD_RESET';
+
+export const RESET = 'OCA/ForgotPassword/RESET';

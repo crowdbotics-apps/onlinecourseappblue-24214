@@ -1,39 +1,35 @@
-import { NavigationActions, StackActions } from "react-navigation";
+import * as React from 'react';
+import { StackActions } from '@react-navigation/native';
 
-const config = {};
-export function setNavigator(nav) {
-  if (nav) {
-    config.navigator = nav;
+export const isMountedRef = React.createRef();
+
+export const navigationRef = React.createRef();
+
+export function navigate(name, params) {
+  if (isMountedRef.current && navigationRef.current) {
+    // Perform navigation if the app has mounted
+    navigationRef.current.navigate(name, params);
+  } else {
+    setTimeout(() => navigate(name, params), 500);
+    // You can decide what to do if the app hasn't mounted
+    // You can ignore this, or add these actions to a queue you can call later
   }
 }
 
-/**
- * Above functions are helpers to navigate to a route without the
- * navigation prop from React Navigation, helpful in sagas or action dispatchers
- * Just include check EmailAuth saga as an example
- */
-export function navigate(routeName, params) {
-  if (config.navigator && routeName) {
-    let action = NavigationActions.navigate({ routeName, params });
-    config.navigator.dispatch(action);
-  }
-}
 export function goBack() {
-  if (config.navigator) {
-    let action = NavigationActions.back({});
-    config.navigator.dispatch(action);
+  if (isMountedRef.current && navigationRef.current) {
+    navigationRef.current.goBack();
+  } else {
   }
 }
 
-export function navigateAndResetStack(routeName, params) {
-  if (config.navigator && routeName) {
-    let action = NavigationActions.navigate({ routeName, params });
+export function push(...args) {
+  navigationRef.current?.dispatch(StackActions.push(...args));
+}
 
-    config.navigator.dispatch(
-      StackActions.reset({
-        index: 0,
-        actions: [action]
-      })
-    );
+export function reset(obj) {
+  if (isMountedRef.current && navigationRef.current) {
+    navigationRef.current.reset(obj);
+  } else {
   }
 }

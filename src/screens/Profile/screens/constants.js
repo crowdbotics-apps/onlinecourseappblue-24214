@@ -1,0 +1,2 @@
+export const aboutUs =
+    'With headquarters in Oklahoma City and multiple branches in the greater Oklahoma City area, True Sky Credit Union has been serving members for more than 70 years. Today, the Credit Union has more than 55,000 members in Canadian, Cleveland, Grady, Lincoln, Logan, McClain, Oklahoma and Pottawatomie counties. Membership is open to anyone who resides, works, worships or attends school in our eight-county service area. Learn more information at ';
