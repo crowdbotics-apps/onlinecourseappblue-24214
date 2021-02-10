@@ -1,6 +1,6 @@
 export const appConfig = {
   // todo add library to handle env variables
-  backendServerURL: 'https://onlinecourseappblue-24214.botics.co',
+  backendServerURL: 'http://af834133868f.ngrok.io',
   emailAuthAPIEndPoint: "https://onlinecourseappblue-24214.botics.co",
   defaultTimeout: 5000,
   pubPublishKey: 'pub-c-09038c51-029c-47a7-95f2-b6c7407afb12',
