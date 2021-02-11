@@ -25,7 +25,7 @@ export default StyleSheet.create({
     button: { borderRadius: 7 },
     buttonText: {
         fontSize: 12,
-        fontFamily: 'Gilroy-ExtraBold',
+        // fontFamily: 'Gilroy-ExtraBold',
         ...Platform.select({
             ios: {
                 fontWeight: 'bold',

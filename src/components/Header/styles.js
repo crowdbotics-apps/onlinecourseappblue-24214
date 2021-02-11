@@ -26,7 +26,7 @@ export default StyleSheet.create({
 
     titleText: {
         fontSize: 18,
-        fontFamily: 'Gilroy-Light',
+        // fontFamily: 'Gilroy-Light',
         ...Platform.select({
             android: {
                 paddingLeft: 18

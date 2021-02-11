@@ -12,7 +12,7 @@ export default StyleSheet.create({
     },
     text: {
         color: Colors.black,
-        fontFamily: 'Gilroy-ExtraBold',
+        // fontFamily: 'Gilroy-ExtraBold',
         height: 40,
     },
     transparentInput: {

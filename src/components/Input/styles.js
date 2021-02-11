@@ -11,7 +11,7 @@ export default StyleSheet.create({
     },
     text: {
         color: Colors.black,
-        fontFamily: 'Gilroy-ExtraBold',
+        // fontFamily: 'Gilroy-ExtraBold',
         ...Platform.select({
             ios: {
                 fontWeight: 'bold',

@@ -2,9 +2,9 @@ import { StyleSheet, Platform } from 'react-native';
 import colors from 'src/styles/colors';
 
 export default StyleSheet.create({
-    fontFamily: { fontFamily: 'Gilroy-Light' },
+    // fontFamily: { fontFamily: 'Gilroy-Light' },
     fontFamilyBold: {
-        fontFamily: 'Gilroy-ExtraBold',
+        // fontFamily: 'Gilroy-ExtraBold',
         ...Platform.select({
             ios: {
                 fontWeight: 'bold',

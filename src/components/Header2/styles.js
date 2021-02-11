@@ -20,7 +20,7 @@ export default StyleSheet.create({
 
     titleText: {
         fontSize: 15,
-        fontFamily: 'Gilroy-Light'
+        // fontFamily: 'Gilroy-Light'
     },
 
     leftStyle: {
@@ -39,7 +39,7 @@ export default StyleSheet.create({
     },
 
     textTitle: {
-        fontFamily: 'Gilroy-ExtraBold',
+        // fontFamily: 'Gilroy-ExtraBold',
         ...Platform.select({
             ios: {
                 fontWeight: 'bold',
