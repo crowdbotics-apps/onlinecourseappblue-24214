@@ -1,0 +1,5 @@
+export const RESET = 'OCA/Search/RESET';
+
+export const SEARCH_COURSES = 'OCA/Search/SEARCH_COURSES';
+export const SEARCH_COURSES_SUCCESS = 'OCA/Search/SEARCH_COURSES_SUCCESS';
+export const SEARCH_COURSES_FAILURE = 'OCA/Search/SEARCH_COURSES_FAILURE';

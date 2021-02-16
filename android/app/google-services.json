@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "551811006786",
+    "project_id": "onlineblueprint-7c46a",
+    "storage_bucket": "onlineblueprint-7c46a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551811006786:android:acab8210216e036de6c8db",
+        "android_client_info": {
+          "package_name": "com.onlinecourseappblue_24214"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551811006786-lr829pkgs11ev2hlo9ua5sdseth49h0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACCxP0ovErxG-Oqd7CfcFJCwqY-DLBIMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551811006786-lr829pkgs11ev2hlo9ua5sdseth49h0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
