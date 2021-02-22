@@ -5,8 +5,8 @@ import colors from 'src/styles/colors';
 
 export default StyleSheet.create({
     container: {
-        marginTop: 46,
-        backgroundColor: colors.whisper
+        flex: 1,
+        marginTop: 46
     },
 
     icon: {

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { TouchableOpacity, FlatList,  View, ActivityIndicator } from 'react-native';
-import { Container, Content, Icon } from 'native-base';
 import {
     Header,
     Footer,
@@ -88,8 +87,7 @@ const Notifications = props => {
             //     </TouchableOpacity>
             // }
             />
-            {/* <Container style={containerMain}> */}
-            <View style={[contentWrapper, containerMain]}>
+            <View style={container}>
                 <DataAvailability
                     requesting={requesting && !notifications}
                     hasData={Boolean(notifications)}
@@ -97,7 +95,7 @@ const Notifications = props => {
                 >
                     {notifications &&
                         <FlatList
-                            keyExtractor={item => item.id}
+                            keyExtractor={item => item.id.toString()}
                             onEndReached={loadMore}
                             onEndReachedThreshold={0.1}
                             data={notifications}
@@ -108,8 +106,7 @@ const Notifications = props => {
                     }
                 </DataAvailability>
             </View>
-                <Footer props={props} activeScreen="Notifications" />
-        {/* </Container> */}
+            <Footer props={props} activeScreen="Notifications" />
         </>
     );
 };
