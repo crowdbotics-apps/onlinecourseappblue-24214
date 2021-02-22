@@ -22,7 +22,8 @@ class UserAdmin(auth_admin.UserAdmin):
     )
     fieldsets = (("User", {"fields": ("name", "image", 'phone_number', 'role', 'country_dial_code', 'country_code')}),) \
                 + auth_admin.UserAdmin.fieldsets
-    list_display = ["username", "name", "is_superuser",'phone_number', 'role', 'country_dial_code', 'country_code']
+    list_display = ["username", "name", "is_superuser",'phone_number', 'role', 'country_dial_code', 'country_code',
+                    'subscription_plan']
     search_fields = ["name"]
 
 
@@ -35,4 +36,4 @@ class UserSettingsAdminForm(forms.ModelForm):
 @admin.register(UserSettings)
 class UserSettingsAdmin(admin.ModelAdmin):
     form = UserSettingsAdminForm
-    list_display = ['id', 'is_premium', 'suggest_class', 'industry', 'download_quality', 'video_quality']
+    list_display = ['id', 'suggest_class', 'industry', 'download_quality', 'video_quality']

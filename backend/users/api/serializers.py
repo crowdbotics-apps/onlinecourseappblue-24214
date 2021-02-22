@@ -52,7 +52,7 @@ class UserVerificationSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'name', 'email', 'phone_number', 'image', 'country_dial_code', 'country_code')
+        fields = ('id', 'name', 'email', 'phone_number', 'image', 'country_dial_code', 'country_code', 'subscription_plan')
 
 
 class SendAskedQuestionEmailSerializer(serializers.Serializer):
@@ -174,4 +174,4 @@ class OnlineLoginSerializer(LoginSerializer):
 class UserSettingsSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserSettings
-        fields = ('id', 'suggest_class', 'industry', 'download_quality', 'video_quality', 'is_premium')
+        fields = ('id', 'suggest_class', 'industry', 'download_quality', 'video_quality')

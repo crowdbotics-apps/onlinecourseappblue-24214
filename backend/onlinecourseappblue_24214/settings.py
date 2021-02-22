@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django_filters",
     "course.apps.CourseConfig",
+    "payments.apps.PaymentsConfig",
 ]
 LOCAL_APPS = [
     'home',
@@ -77,7 +78,8 @@ THIRD_PARTY_APPS = [
     "django_twilio",
     "storages",
     'push_notifications',
-    'admin_reorder'
+    'admin_reorder',
+    # 'djstripe'
 ]
 INSTALLED_APPS += LOCAL_APPS + THIRD_PARTY_APPS
 
@@ -146,6 +148,11 @@ ADMIN_REORDER = (
     {'app': 'course', 'label': 'Course Lessons',
      'models': ('course.Lesson',
                 # 'course.LessonProgress'
+                )
+     },
+
+    {'app': 'payments', 'label': 'Payments',
+     'models': ('payments.StripeCustomer',
                 )
      },
 
@@ -290,6 +297,16 @@ ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 ACCOUNT_UNIQUE_EMAIL = True
 LOGIN_REDIRECT_URL = "users:redirect"
+
+# Stripe
+STRIPE_TEST_PUBLIC_KEY = env.str("STRIPE_TEST_PUBLIC_KEY")
+STRIPE_TEST_SECRET_KEY = env.str("STRIPE_TEST_SECRET_KEY")
+STRIPE_API_KEY = env.str('STRIPE_API_KEY')
+STRIPE_LIVE_PUBLIC_KEY = env.str("STRIPE_LIVE_PUBLIC_KEY")
+STRIPE_LIVE_SECRET_KEY = env.str("STRIPE_LIVE_SECRET_KEY")
+STRIPE_LIVE_MODE = env.bool("STRIPE_LIVE_MODE")
+DJSTRIPE_WEBHOOK_SECRET = env.str("DJSTRIPE_WEBHOOK_SECRET")  # Get it from the section in the Stripe dashboard where you added the webhook endpoint
+DJSTRIPE_FOREIGN_KEY_TO_FIELD = env.str("DJSTRIPE_FOREIGN_KEY_TO_FIELD")
 
 ACCOUNT_ADAPTER = "users.adapters.AccountAdapter"
 SOCIALACCOUNT_ADAPTER = "users.adapters.SocialAccountAdapter"
