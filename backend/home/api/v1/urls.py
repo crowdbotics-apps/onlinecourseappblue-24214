@@ -13,6 +13,7 @@ router = DefaultRouter()
 router.register("signup", SignupViewSet, basename="signup")
 router.register("login", LoginViewSet, basename="login")
 router.register("update-user-profile", UpdateUserProfile, basename="update-user-profile")
+# router.register("user-settings", UserSettingsViewset, basename="user-settings")
 router.register("customtext", CustomTextViewSet)
 router.register("homepage", HomePageViewSet)
 router.register("mobile-devices", FCMDeviceAuthorizedViewSetCustom, basename="mobile-devices"),

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // components
-import { ActivityIndicator } from 'react-native';
+import { ActivityIndicator, TouchableOpacity } from 'react-native';
 import { Text, Avatar } from 'src/components';
 import { View } from 'native-base';
 
@@ -16,13 +16,21 @@ const Banner = ({
     image,
     color,
     large,
+    action,
     loading,
     editable,
     onEdit,
     isEnrolled,
     currentBalance
 }) => {
-    const { info, text, balance, balanceText, infoWrapper, rangeText } = styles;
+    const {
+        info,
+        text,
+        balance,
+        balanceText,
+        infoWrapper,
+        authorText,
+        rangeText } = styles;
 
     return (
         <View style={[info, color && styles[color]]}>
@@ -49,15 +57,19 @@ const Banner = ({
                             bold
                         />
                         {name && (
-                            <View style={infoWrapper}>
-                                <Text text={name} color={color} category="p1" bold />
-                                <Text
+                            <TouchableOpacity style={infoWrapper} onPress={action && action}>
+                            <Avatar
+                                size="small"
+                                image_url={image}
+                            />
+                            <Text text={name} color={color} style={authorText} category="p1" />
+                            {/* <Text
                                     text={range}
                                     style={rangeText}
                                     color={color}
                                     category="s2"
-                                />
-                            </View>
+                                /> */}
+                            </TouchableOpacity>
                         )}
 
                         {/* {currentBalance !== false && isEnrolled && (

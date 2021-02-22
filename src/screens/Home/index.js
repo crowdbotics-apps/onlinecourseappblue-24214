@@ -26,6 +26,7 @@ import getDeviceInfo from 'src/utils/getDeviceInfo';
 
 // actions
 import { registerMobileDevice } from 'src/screens/Registration/redux/actions';
+import { getSettings } from 'src/screens/Settings/redux/actions';
 // import { getNotificationsCount } from 'src/screens/Notifications/redux/actions';
 import { getCourses, getCategories, resetPage } from './redux/actions';
 
@@ -50,6 +51,7 @@ const Home = props => {
     useEffect(() => {
         user.id && props.getCourses(1, '');
         user.id && props.getCategories();
+        user.id && props.getSettings();
 
         getDeviceInfo(user.id, authToken).then(deviceInfo => {
             user.id && props.registerMobileDevice(deviceInfo);
@@ -62,6 +64,7 @@ const Home = props => {
             title: course.title,
             description: course.description,
             image: course.image,
+            author_id: course.author,
             author_name: course.author_name,
             author_image: course.author_image,
             is_enrolled: course.is_enrolled
@@ -216,7 +219,8 @@ const mapDispatchToProps = dispatch => ({
     getCourses: (page, query) => dispatch(getCourses(page, query)),
     getCategories: () => dispatch(getCategories()),
     registerMobileDevice: data => dispatch(registerMobileDevice(data)),
-    resetPage: () => dispatch(resetPage())
+    resetPage: () => dispatch(resetPage()),
+    getSettings: () => dispatch(getSettings())
 });
 
 export default connect(

@@ -16,6 +16,8 @@ import module from 'src/screens/Module/redux/reducer';
 import lessonDetail from 'src/screens/LessonDetail/redux/reducer';
 import assignments from 'src/screens/Assignments/redux/reducer';
 import profile from 'src/screens/Profile/redux/reducer';
+import instructorCourses from 'src/screens/InstructorCourses/redux/reducer';
+import settings from 'src/screens/Settings/redux/reducer';
 
 const appPersistConfig = {
   key: 'app',
@@ -37,5 +39,7 @@ export const combinedReducers = {
   module,
   lessonDetail,
   assignments,
-  profile
+  profile,
+  instructorCourses,
+  settings
 };

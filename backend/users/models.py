@@ -92,3 +92,15 @@ class User(AbstractUser):
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
+
+
+class UserSettings(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    is_premium = models.BooleanField(default=False)
+    suggest_class = models.BooleanField(default=True, null=True, blank=True)
+    industry = models.IntegerField(default=2, null=True, blank=True)
+    download_quality = models.IntegerField(default=2, null=True, blank=True)
+    video_quality = models.IntegerField(default=2, null=True, blank=True)
+
+    class Meta:
+        verbose_name_plural = 'User Settings'

@@ -1,0 +1,5 @@
+export const GET_SETTINGS = 'OCA/Settings/GET_SETTINGS';
+export const GET_SETTINGS_SUCCESS = 'OCA/Settings/GET_SETTINGS_SUCCESS';
+export const GET_SETTINGS_FAILURE = 'OCA/Settings/GET_SETTINGS_FAILURE';
+export const UPDATE_SETTINGS = 'OCA/Settings/UPDATE_SETTINGS';
+export const RESET_REQUESTING = 'OCA/Settings/RESET_REQUESTING';

@@ -54,6 +54,14 @@ const Course = ({ course, progress, onPress, size }) => {
                         numberOfLines={2}
                     />
                     <Text
+                        text={author_name}
+                        color='secondary'
+                        bold
+                        category="p2"
+                        style={text}
+                        numberOfLines={1}
+                    />
+                    <Text
                         text={`${duration.split(':')[1]} Mins`}
                         category="p2"
                         style={progress && progressText}

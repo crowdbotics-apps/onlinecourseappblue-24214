@@ -14,6 +14,8 @@ import module from 'src/screens/Module/redux/sagas';
 import LessonDetail from 'src/screens/LessonDetail/redux/sagas';
 import assignments from 'src/screens/Assignments/redux/sagas';
 import profile from 'src/screens/Profile/redux/sagas';
+import instructorCourses from 'src/screens/InstructorCourses/redux/sagas';
+import settings from 'src/screens/Settings/redux/sagas';
 
 export function* mainSaga() {
   yield all([
@@ -29,6 +31,8 @@ export function* mainSaga() {
     module,
     LessonDetail,
     assignments,
-    profile
+    profile,
+    instructorCourses,
+    settings
   ]);
 }

@@ -19,6 +19,10 @@ export default StyleSheet.create({
         marginTop: 7
     },
 
+    authorText: {
+        marginLeft: 5
+    },
+
     rangeText: {
         marginLeft: 8
     },

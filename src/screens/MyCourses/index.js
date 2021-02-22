@@ -3,7 +3,7 @@ import { View, StyleSheet, FlatList, ActivityIndicator, Dimensions } from 'react
 import { connect } from 'react-redux';
 
 // components
-import { Container, Content } from 'native-base';
+import { Container } from 'native-base';
 import { Header, Input, BackIcon, SearchIcon, FilterIcon, Course, DataAvailability } from 'src/components';
 
 // styles

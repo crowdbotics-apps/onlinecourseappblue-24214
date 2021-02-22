@@ -95,6 +95,7 @@ MIDDLEWARE = [
 ADMIN_REORDER = (
     {'app': 'users', 'label': 'Users',
      'models': ('users.User',
+                'users.UserSettings',
                 )
      },
 
