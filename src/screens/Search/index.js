@@ -8,6 +8,7 @@ import {
     Category,
     Input,
     Text,
+    Footer,
     FilterIcon,
     SearchIcon as CrossIcon,
     Course,
@@ -100,7 +101,8 @@ const Search = props => {
     const requestingMore = () => requesting && <ActivityIndicator color="#1C3D6E" />
 
     const {
-        container,
+        containerMain,
+        contentWrapper,
         headingWrapper,
         catagoryHeading,
         columnWrapperStyle
@@ -122,28 +124,29 @@ const Search = props => {
                     )
                 }
             />
-            <Container style={container}>
-                <View style={input}>
-                    <Input
-                        value={query}
-                        maxLength={40}
-                        returnKeyType="search"
-                        onSubmitEditing={() => search()}
-                        placeholder="Enter Search query"
-                        onChangeText={val => setQuery(val)}
-                    />
-                </View>
-
-                <View style={headingWrapper}>
-                    <View style={catagoryHeading}>
-                        <Text
-                            text={showFilter ? 'Select from Categories' : 'Search Results'}
-                            bold
-                            category="h5"
+            <Container style={containerMain}>
+                <View style={contentWrapper}>
+                    <View style={input}>
+                        <Input
+                            value={query}
+                            maxLength={40}
+                            returnKeyType="search"
+                            onSubmitEditing={() => search()}
+                            placeholder="Enter Search query"
+                            onChangeText={val => setQuery(val)}
                         />
                     </View>
-                    <FilterIcon action={onPressFilter} />
-                </View>
+
+                    <View style={headingWrapper}>
+                        <View style={catagoryHeading}>
+                            <Text
+                                text={showFilter ? 'Select from Categories' : 'Search Results'}
+                                bold
+                                category="h5"
+                            />
+                        </View>
+                        <FilterIcon action={onPressFilter} />
+                    </View>
                     {showFilter &&
                         categories &&
                         categories.map(category => (
@@ -172,6 +175,8 @@ const Search = props => {
                             />
                         )}
                     </DataAvailability>
+                </View>
+                <Footer props={props} activeScreen="Search" />
             </Container>
         </>
     );

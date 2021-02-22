@@ -2,7 +2,15 @@ import React, { useEffect } from 'react';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
 import { Container, Content } from 'native-base';
-import { Header, Text, ExitIcon, Button, ListItem, DataAvailability } from 'src/components';
+import {
+    Header,
+    Text,
+    ExitIcon,
+    Button,
+    ListItem,
+    Footer,
+    DataAvailability
+} from 'src/components';
 
 // constants
 import { Industries, downloadQuality, videoQuality } from './constants';
@@ -27,7 +35,16 @@ const Settings = props => {
         props.updateSettings(id, { is_premium: true });
     }
 
-    const { container, heading, title, subscription, dataWrapper, button } = styles;
+    const {
+        container,
+        heading,
+        title,
+        containerMain,
+        contentWrapper,
+        subscription,
+        dataWrapper,
+        button
+    } = styles;
 
     return (
         <>
@@ -36,16 +53,30 @@ const Settings = props => {
                 title='Settings'
                 left={<ExitIcon color="secondary" action={() => goBack()} />}
             />
-            <Container style={container}>
-                <Content showsVerticalScrollIndicator={false}>
+            <Container style={containerMain}>
+                <Content
+                    showsVerticalScrollIndicator={false}
+                    style={contentWrapper}
+                >
                     <DataAvailability
                         requesting={requesting}
                         hasData={Boolean(settings)}
                         style={dataWrapper}
                     >
                         <View style={heading}>
-                            <Text text="Current Subscription" category="h6" style={title} bold />
-                            <Text text={is_premium ? "Premium" : "Free"} color='septenary' category="s2" style={subscription} bold />
+                            <Text
+                                text="Current Subscription"
+                                category="h6"
+                                style={title}
+                                bold
+                            />
+                            <Text
+                                text={is_premium ? 'Premium' : 'Free'}
+                                color="septenary"
+                                category="s2"
+                                style={subscription}
+                                bold
+                            />
                         </View>
                         {!is_premium &&
                             <Button
@@ -74,12 +105,15 @@ const Settings = props => {
                             onPress={() => navigate('UpdateSettings')}
                         /> */}
                         <ListItem
-                            text='Video Quality'
-                            value={video_quality && videoQuality[video_quality - 1].title}
+                            text="Video Quality"
+                            value={
+                                video_quality && videoQuality[video_quality - 1].title
+                            }
                             onPress={() => navigate('UpdateSettings')}
                         />
                     </DataAvailability>
                 </Content>
+                <Footer props={props} activeScreen="Settings" />
             </Container>
         </>
     );

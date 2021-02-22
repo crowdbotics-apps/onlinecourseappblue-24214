@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TouchableOpacity } from 'react-native';
 
 // components
@@ -30,8 +30,15 @@ const configs = [
     }
 ]
 
-const Footer = () => {
-    const [activeRoute, setActiveRoute] = useState('Home');
+const Footer = ({ props, activeScreen }) => {
+    const {
+        route,
+        navigation: { navigate, replace }
+    } = props;
+
+    const goToScreen = screenRoute => {
+        route.name === 'Home' ? navigate(screenRoute) : replace(screenRoute);
+    };
 
     const { footer, touch, icon, active } = styles;
 
@@ -42,17 +49,17 @@ const Footer = () => {
                     <TouchableOpacity
                         key={i}
                         style={touch}
-                        onPress={() => setActiveRoute(screen.route)}
+                        onPress={() => goToScreen(screen.route)}
                     >
                         <Icon
                             type='MaterialIcons'
                             name={screen.icon}
-                            style={activeRoute === screen.route ? active : icon}
+                            style={activeScreen === screen.route ? active : icon}
                         />
                     </TouchableOpacity>
                 ))}
             </FooterTab>
-        </NBFooter >
+        </NBFooter>
     );
 }
 

@@ -14,6 +14,7 @@ import {
     MenuIcon,
     Text,
     Input,
+    Footer,
     SearchIcon,
     FilterIcon,
     Course,
@@ -111,6 +112,7 @@ const Home = props => {
     };
 
     const {
+        content,
         container,
         input,
         heading,
@@ -152,6 +154,7 @@ const Home = props => {
 
             <Container style={container}>
                 <Content
+                    style={content}
                     showsVerticalScrollIndicator={false}
                     refreshControl={
                         <RefreshControl refreshing={false} onRefresh={refresh} />
@@ -172,7 +175,9 @@ const Home = props => {
                                     showsHorizontalScrollIndicator={false}
                                     keyExtractor={course => course.id.toString()}
                                 />
-                                {props.requesting && <ActivityIndicator color="#1C3D6E" />}
+                                {props.requesting && (
+                                    <ActivityIndicator color="#1C3D6E" />
+                                )}
                             </View>
                         )}
                     </DataAvailability>
@@ -199,6 +204,7 @@ const Home = props => {
                             ))}
                     </DataAvailability>
                 </Content>
+                <Footer props={props} activeScreen="Home" />
             </Container>
         </>
     );
