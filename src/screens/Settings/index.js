@@ -16,7 +16,6 @@ import {
 import { Industries, downloadQuality, videoQuality } from './constants';
 
 // actions
-import { updateSettings } from './redux/actions';
 import { cancelSubscription } from 'src/screens/Subscription/redux/actions';
 
 // styles
@@ -40,11 +39,7 @@ const Settings = props => {
         }
     };
 
-    const { id, is_premium, suggest_class, industry, download_quality, video_quality } = settings;
-
-    const updateData = () => {
-        props.updateSettings(id, { is_premium: true });
-    }
+    const { suggest_class, industry, download_quality, video_quality } = settings;
 
     const {
         container,
@@ -139,7 +134,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    updateSettings: (id, data) => dispatch(updateSettings(id, data)),
     cancelSubscription: () => dispatch(cancelSubscription())
 });
 

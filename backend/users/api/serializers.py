@@ -174,4 +174,4 @@ class OnlineLoginSerializer(LoginSerializer):
 class UserSettingsSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserSettings
-        fields = ('id', 'suggest_class', 'industry', 'download_quality', 'video_quality', 'is_premium')
+        fields = ('id', 'suggest_class', 'industry', 'download_quality', 'video_quality')
