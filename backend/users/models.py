@@ -97,6 +97,7 @@ class User(AbstractUser):
 
 class UserSettings(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    is_premium = models.BooleanField(default=False)
     suggest_class = models.BooleanField(default=True, null=True, blank=True)
     industry = models.IntegerField(default=2, null=True, blank=True)
     download_quality = models.IntegerField(default=2, null=True, blank=True)

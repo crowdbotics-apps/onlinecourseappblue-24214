@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 // components
 import { Text } from 'react-native';
 
+// styles
+import Colors from 'src/styles/colors';
+
 const Error = ({ errors }) => {
     const { text } = styles;
     if (errors) {
@@ -24,17 +27,17 @@ const Error = ({ errors }) => {
 
 const styles = StyleSheet.create({
     text: {
-        color: '#D93025',
-        fontSize: 10,
-    },
+        color: Colors.punch,
+        fontSize: 10
+    }
 });
 
 Error.propTypes = {
     errors: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.string,
-        PropTypes.array,
-    ]),
+        PropTypes.array
+    ])
 };
 
 export default Error;

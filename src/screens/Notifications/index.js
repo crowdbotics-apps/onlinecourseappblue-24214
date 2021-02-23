@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { TouchableOpacity, FlatList,  View, ActivityIndicator } from 'react-native';
+import { TouchableOpacity, FlatList, View, ActivityIndicator } from 'react-native';
 import {
     Header,
     Footer,
@@ -34,9 +34,6 @@ const Notifications = props => {
 
     const {
         container,
-        icon,
-        containerMain,
-        contentWrapper,
         dataWrapper
     } = styles;
 

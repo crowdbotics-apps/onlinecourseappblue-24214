@@ -20,4 +20,4 @@ RUN python3 manage.py collectstatic --no-input
 RUN adduser --disabled-password --gecos "" django
 USER django
 # Run the web server on port $PORT
-CMD waitress-serve --port=$PORT onlinecourseappblue_15214.wsgi:application
+CMD waitress-serve --port=$PORT onlinecourseappblue_24214.wsgi:application

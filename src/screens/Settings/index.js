@@ -17,17 +17,28 @@ import { Industries, downloadQuality, videoQuality } from './constants';
 
 // actions
 import { updateSettings } from './redux/actions';
+import { cancelSubscription } from 'src/screens/Subscription/redux/actions';
 
 // styles
 import styles from './styles';
 
 const Settings = props => {
     const {
-        requesting,
-        settings,
-        requestingUpdate,
-        navigation: { goBack, navigate }
+      user: { subscription_plan },
+      requesting,
+      settings,
+      requestingUpdate,
+      requestingCancelSubscription,
+      navigation: { goBack, navigate }
     } = props;
+
+    const onPressSubmit = () => {
+        if (subscription_plan) {
+          props.cancelSubscription();
+        } else {
+          navigate('UpdateSubscription');
+        }
+    };
 
     const { id, is_premium, suggest_class, industry, download_quality, video_quality } = settings;
 
@@ -50,7 +61,7 @@ const Settings = props => {
         <>
             <Header
                 color="secondary"
-                title='Settings'
+                title="Settings"
                 left={<ExitIcon color="secondary" action={() => goBack()} />}
             />
             <Container style={containerMain}>
@@ -71,31 +82,31 @@ const Settings = props => {
                                 bold
                             />
                             <Text
-                                text={is_premium ? 'Premium' : 'Free'}
+                                text={subscription_plan ? 'Premium' : 'Free'}
                                 color="septenary"
                                 category="s2"
                                 style={subscription}
                                 bold
                             />
                         </View>
-                        {!is_premium &&
                             <Button
-                                text='UPGRDE TO PREMIUM'
+                                text={
+                                    subscription_plan ? 'CANCEL SUBSCRIPTION' : 'UPGRDE TO PREMIUM'
+                                }
                                 style={button}
                                 color="primary"
-                                loading={requestingUpdate}
-                                disabled={requestingUpdate}
+                                loading={requestingUpdate || requestingCancelSubscription}
+                                disabled={requestingUpdate || requestingCancelSubscription}
                                 block
-                                onPress={updateData}
+                                onPress={onPressSubmit}
                             />
-                        }
                         <ListItem
-                            text='Suggest Classes'
+                            text="Suggest Classes"
                             value={suggest_class ? 'Yes': 'No'}
                             onPress={() => navigate('UpdateSettings')}
                         />
                         <ListItem
-                            text='Industry'
+                            text="Industry"
                             value={industry && Industries[industry - 1].title}
                             onPress={() => navigate('UpdateSettings')}
                         />
@@ -123,11 +134,13 @@ const mapStateToProps = state => ({
     user: state.app.user,
     settings: state.settings.settings,
     requesting: state.settings.requesting,
-    requestingUpdate: state.settings.requestingUpdate
+    requestingUpdate: state.settings.requestingUpdate,
+    requestingCancelSubscription: state.subscription.requestingUpdate
 });
 
 const mapDispatchToProps = dispatch => ({
-    updateSettings: (id, data) => dispatch(updateSettings(id, data))
+    updateSettings: (id, data) => dispatch(updateSettings(id, data)),
+    cancelSubscription: () => dispatch(cancelSubscription())
 });
 
 export default connect(

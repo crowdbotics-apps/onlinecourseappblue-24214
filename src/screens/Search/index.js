@@ -162,7 +162,7 @@ const Search = props => {
                         style={dataWrapper}>
                         {courses && numColumns && (
                             <FlatList
-                                key={numColumns > 2 ? '_': '$'}
+                                key={numColumns > 2 ? '_' : '$'}
                                 keyExtractor={item => item.id}
                                 onEndReached={loadMore}
                                 onEndReachedThreshold={0.1}

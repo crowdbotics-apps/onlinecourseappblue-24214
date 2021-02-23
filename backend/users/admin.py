@@ -36,4 +36,4 @@ class UserSettingsAdminForm(forms.ModelForm):
 @admin.register(UserSettings)
 class UserSettingsAdmin(admin.ModelAdmin):
     form = UserSettingsAdminForm
-    list_display = ['id', 'suggest_class', 'industry', 'download_quality', 'video_quality']
+    list_display = ['id', 'is_premium', 'suggest_class', 'industry', 'download_quality', 'video_quality']
