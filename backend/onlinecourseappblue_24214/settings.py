@@ -79,7 +79,7 @@ THIRD_PARTY_APPS = [
     "storages",
     'push_notifications',
     'admin_reorder',
-    # 'djstripe'
+    'djstripe'
 ]
 INSTALLED_APPS += LOCAL_APPS + THIRD_PARTY_APPS
 
