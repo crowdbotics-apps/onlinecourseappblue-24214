@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { TouchableOpacity, FlatList, ActivityIndicator } from 'react-native';
-import { Container, Content, Icon } from 'native-base';
+import { TouchableOpacity, FlatList,  View, ActivityIndicator } from 'react-native';
 import {
     Header,
+    Footer,
     BackIcon,
     Notification,
     DataAvailability
@@ -32,7 +32,13 @@ const Notifications = props => {
         return () => props.resetPage();
     }, []);
 
-    const { container, icon, dataWrapper } = styles;
+    const {
+        container,
+        icon,
+        containerMain,
+        contentWrapper,
+        dataWrapper
+    } = styles;
 
     const onPressCourse = notification => {
         const id = notification.id;
@@ -81,7 +87,7 @@ const Notifications = props => {
             //     </TouchableOpacity>
             // }
             />
-            <Container style={container}>
+            <View style={container}>
                 <DataAvailability
                     requesting={requesting && !notifications}
                     hasData={Boolean(notifications)}
@@ -89,7 +95,7 @@ const Notifications = props => {
                 >
                     {notifications &&
                         <FlatList
-                            keyExtractor={item => item.id}
+                            keyExtractor={item => item.id.toString()}
                             onEndReached={loadMore}
                             onEndReachedThreshold={0.1}
                             data={notifications}
@@ -99,7 +105,8 @@ const Notifications = props => {
                         />
                     }
                 </DataAvailability>
-            </Container>
+            </View>
+            <Footer props={props} activeScreen="Notifications" />
         </>
     );
 };

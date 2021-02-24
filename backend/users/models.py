@@ -83,6 +83,7 @@ class User(AbstractUser):
     role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, default=STUDENT)
     country_dial_code = models.CharField(max_length=10, null=True, blank=True)
     country_code = models.CharField(max_length=10, null=True, blank=True)
+    subscription_plan = models.CharField(null=True, blank=True, max_length=255)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', ]
@@ -92,3 +93,14 @@ class User(AbstractUser):
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
+
+
+class UserSettings(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    suggest_class = models.BooleanField(default=True, null=True, blank=True)
+    industry = models.IntegerField(default=2, null=True, blank=True)
+    download_quality = models.IntegerField(default=2, null=True, blank=True)
+    video_quality = models.IntegerField(default=2, null=True, blank=True)
+
+    class Meta:
+        verbose_name_plural = 'User Settings'

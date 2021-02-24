@@ -34,7 +34,16 @@ import colors from 'src/styles/colors';
 const Module = props => {
     const {
         route: {
-            params: { id, title, description, image }
+            params: {
+                id,
+                title,
+                description,
+                image,
+                author_id,
+                author_name,
+                author_image,
+                is_enrolled
+            }
         },
         user,
         ledger,
@@ -212,6 +221,14 @@ const Module = props => {
         2: ThirdRoute,
     });
 
+    const onPressInstructor = () => {
+        navigation.navigate('InstructorCourses', {
+            id: author_id,
+            name:author_name,
+            image:author_image
+        })
+    }
+
     const {
         container,
         courseimage,
@@ -248,8 +265,11 @@ const Module = props => {
                 }
             />
             <Banner
+                action={() => onPressInstructor()}
                 color="primary"
                 title={title}
+                name={author_name}
+                image={author_image}
                 currentBalance={currentBalance}
                 isEnrolled={course.is_enrolled}
             />

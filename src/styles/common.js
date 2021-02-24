@@ -39,6 +39,15 @@ export default StyleSheet.create({
     backgroundColor: colors.whisper
   },
 
+  containerMain: {
+    backgroundColor: colors.whisper
+  },
+
+  contentWrapper: {
+    flex: 1,
+    paddingHorizontal: 22
+  },
+
   headingWrapper: {
     flexDirection: 'row',
     marginTop: 13,

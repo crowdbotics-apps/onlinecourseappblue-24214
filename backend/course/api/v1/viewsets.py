@@ -42,6 +42,7 @@ from rest_framework import viewsets, status
 
 from ...utils import get_customized_serializer
 
+
 class CategoryViewSet(viewsets.ModelViewSet):
     pagination_class = StandardResultsSetPagination
     serializer_class = CategorySerializer
@@ -74,11 +75,14 @@ class CourseViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         queryset = self.queryset
         enrolled_status = self.request.query_params.get('get_enrolled_courses', None)
+        author_id = self.request.query_params.get('author_id', None)
         if enrolled_status:
             if str(enrolled_status) == 'true':
                 queryset = queryset.filter(enrollment_course__user_id=self.request.user.pk)
             else:
                 queryset = queryset.exclude(enrollment_course__user_id=self.request.user.pk)
+        if author_id:
+            queryset = queryset.filter(author_id=int(author_id))
 
         return queryset
 

@@ -24,9 +24,9 @@ const routes = [
     // { name: 'Subscription', route: 'Subscription', icon: 'credit-card' },
     { name: 'Notifications', route: 'Notifications', icon: 'notifications' },
     { name: 'Profile', route: 'Profile', icon: 'person', },
-    // { name: 'Settings', route: 'Settings', icon: 'settings' },
     { name: 'My Courses', route: 'MyCourses', icon: 'star-border' },
-    { name: 'Search', route: 'Search', icon: 'search' }
+    { name: 'Search', route: 'Search', icon: 'search' },
+    { name: 'Settings', route: 'Settings', icon: 'settings' }
 ];
 
 class SideBar extends React.Component {

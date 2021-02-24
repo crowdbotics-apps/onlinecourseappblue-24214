@@ -6,13 +6,14 @@ from phone_verification.views import VerifyPhoneNumber, CreateNewKeyViewSet
 
 from home.api.v1.viewsets import (SignupViewSet, LoginViewSet, HomePageViewSet, CustomTextViewSet, AppReportView,
                                   FCMDeviceAuthorizedViewSetCustom)
-from users.api.viewsets import UpdateUserProfile, SendAskedQuestionEmail
+from users.api.viewsets import UpdateUserProfile, SendAskedQuestionEmail, UserSettingsViewset
 from users.views import PasswordResetViewSet, ResetPasswordConfirm
 
 router = DefaultRouter()
 router.register("signup", SignupViewSet, basename="signup")
 router.register("login", LoginViewSet, basename="login")
 router.register("update-user-profile", UpdateUserProfile, basename="update-user-profile")
+router.register("user-settings", UserSettingsViewset, basename="user-settings")
 router.register("customtext", CustomTextViewSet)
 router.register("homepage", HomePageViewSet)
 router.register("mobile-devices", FCMDeviceAuthorizedViewSetCustom, basename="mobile-devices"),

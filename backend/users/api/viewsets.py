@@ -11,7 +11,13 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
-from users.api.serializers import UserVerificationSerializer, UserUpdateSerializer, SendAskedQuestionEmailSerializer
+from users.api.serializers import (
+    UserVerificationSerializer,
+    UserUpdateSerializer,
+    SendAskedQuestionEmailSerializer,
+    UserSettingsSerializer)
+from users.models import UserSettings
+
 from users.utils import random_string
 
 User = get_user_model()
@@ -72,4 +78,14 @@ class UpdateUserProfile(ModelViewSet):
         if getattr(instance, '_prefetched_objects_cache', None):
             instance._prefetched_objects_cache = {}
 
+        return Response(serializer.data)
+
+
+class UserSettingsViewset(ModelViewSet):
+    serializer_class = UserSettingsSerializer
+    queryset = UserSettings.objects.all()
+
+    def list(self, request, *args, **kwargs):
+        queryset, created = UserSettings.objects.get_or_create(pk=self.request.user.pk)
+        serializer = self.get_serializer(queryset, many=False)
         return Response(serializer.data)

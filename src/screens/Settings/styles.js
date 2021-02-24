@@ -11,6 +11,7 @@ export default StyleSheet.create({
 
     heading: {
         marginTop: 46,
+        marginBottom: 4,
         flexDirection: 'row',
         paddingVertical: 18,
         paddingHorizontal: 35,
@@ -30,5 +31,13 @@ export default StyleSheet.create({
     button: {
         marginVertical: 32,
         marginHorizontal: 49
+    },
+    
+    updateContainer: {
+        paddingHorizontal: 22
+    },
+
+    dataWrapper: {
+        paddingVertical: 100
     }
 });
