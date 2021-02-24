@@ -16,7 +16,7 @@ import {
     UPDATE_NOTIFICATION
 } from './types';
 
-export const getAppNotifications = (state) => state.app.notifications;
+const getAppNotifications = (state) => state.app.notifications;
 
 async function getNotificationsAPI(page) {
     const authToken = await AsyncStorage.getItem('authToken');
@@ -25,7 +25,7 @@ async function getNotificationsAPI(page) {
     const options = {
         headers: {
             Authorization: 'Token ' + authToken,
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
         },
         method: 'GET'
     };
@@ -40,7 +40,7 @@ async function getNotificationsCountAPI() {
     const options = {
         headers: {
             Authorization: 'Token ' + authToken,
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
         },
         method: 'GET'
     };
@@ -100,13 +100,11 @@ function* getNotificationsCount() {
 function* updateNotification({ id }) {
     try {
         yield call(updateNotificationAPI, id, { is_opened: true });
-    } catch (e) {
-
-    }
+    } catch (e) {}
 }
 
 export default all([
     takeLatest(GET_NOTIFICATIONS, getNotifications),
     takeLatest(GET_NOTIFICATIONS_COUNT, getNotificationsCount),
-    takeLatest(UPDATE_NOTIFICATION, updateNotification),
+    takeLatest(UPDATE_NOTIFICATION, updateNotification)
 ]);

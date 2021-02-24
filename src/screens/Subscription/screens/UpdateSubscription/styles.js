@@ -1,9 +1,16 @@
 import { StyleSheet } from 'react-native';
 
+// styles
+import colors from 'src/styles/colors';
+
 export default StyleSheet.create({
   container: {
     paddingBottom: 20,
-    paddingTop: 10
+    paddingTop: 10,
+    backgroundColor: colors.whisper
+  },
+  updateContainer: {
+    paddingHorizontal: 22
   },
   heading: {
     paddingVertical: 10
@@ -18,5 +25,8 @@ export default StyleSheet.create({
   },
   button: {
     marginTop: 20
+  },
+  dataWrapper: {
+    paddingVertical: 100
   }
 });

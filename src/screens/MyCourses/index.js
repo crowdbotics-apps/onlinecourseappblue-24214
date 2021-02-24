@@ -89,7 +89,7 @@ const MyCourses = props => {
         <>
             <Header
                 color="primary"
-                title='My Courses'
+                title="My Courses"
                 input={searchInput &&
                     <Input
                         autoFocus

@@ -52,7 +52,7 @@ const Footer = ({ props, activeScreen }) => {
                         onPress={() => goToScreen(screen.route)}
                     >
                         <Icon
-                            type='MaterialIcons'
+                            type="MaterialIcons"
                             name={screen.icon}
                             style={activeScreen === screen.route ? active : icon}
                         />
@@ -61,6 +61,6 @@ const Footer = ({ props, activeScreen }) => {
             </FooterTab>
         </NBFooter>
     );
-}
+};
 
 export default Footer;
