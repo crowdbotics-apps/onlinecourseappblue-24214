@@ -60,7 +60,7 @@ const Home = props => {
     }, []);
 
     const onPressCourse = course => {
-        props.navigation.navigate('Module', {
+        props.navigation.navigate('CourseDetail', {
             id: course.id,
             title: course.title,
             description: course.description,

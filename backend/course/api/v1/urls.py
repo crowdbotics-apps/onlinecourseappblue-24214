@@ -13,14 +13,15 @@ from .viewsets import (
     SubscriptionTypeViewSet,
     LessonProgressViewSet,
     AssignmentViewSet,
-    LedgerViewSet)
+    LedgerViewSet,
+    ModuleViewSet)
 
 router = DefaultRouter()
 router.register("category", CategoryViewSet)
 router.register("group", GroupViewSet)
 router.register("paymentmethod", PaymentMethodViewSet)
 router.register("course", CourseViewSet)
-# router.register("module", ModuleViewSet)
+router.register("module", ModuleViewSet)
 router.register("lesson", LessonViewSet)
 router.register("enrollment", EnrollmentViewSet)
 router.register("subscription", SubscriptionViewSet)

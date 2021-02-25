@@ -21,7 +21,10 @@ from course.models import (
     Subscription,
     SubscriptionType,
     LessonProgress,
-    Assignment, Ledger)
+    Assignment,
+    Ledger,
+    Module,
+    ModuleProgress)
 from notifications.models import Notification
 
 from onlinecourseappblue_24214.pagination import StandardResultsSetPagination
@@ -37,7 +40,9 @@ from .serializers import (
     SubscriptionSerializer,
     SubscriptionTypeSerializer,
     LessonProgressSerializer,
-    AssignmentSerializer, LedgerSerializer)
+    AssignmentSerializer,
+    LedgerSerializer,
+    ModuleSerializer)
 from rest_framework import viewsets, status
 
 from ...utils import get_customized_serializer
@@ -90,41 +95,30 @@ class CourseViewSet(viewsets.ModelViewSet):
         instance = self.get_object()
         serializer = self.get_serializer(instance)
         course_data = {"course": serializer.data}
-        lessons = Lesson.objects.filter(course_id=instance)
-        lesson_serializer = LessonSerializer(lessons, many=True, context={'request': request})
-        course_data["lessons"] = lesson_serializer.data
-        assignments = Assignment.objects.filter(lesson__course_id=instance).order_by('lesson')
-        course_data["types"] = ['_'.join(str(a.content_type).split(' ')[:2]) for a in assignments]
-        assignment_serializer = AssignmentSerializer(assignments, many=True, context={'request': request})
-        course_data["assignments"] = assignment_serializer.data
-        ledger = Ledger.objects.filter(course_id=instance, user=self.request.user).first()
-        ledger_serializer = LedgerSerializer(ledger, context={'request': request})
-        course_data["ledger"] = ledger_serializer.data
         return Response(course_data)
 
 
-# class ModuleViewSet(viewsets.ModelViewSet):
-#     serializer_class = ModuleSerializer
-#     queryset = Module.objects.all()
-#
-#     def get_queryset(self):
-#         queryset = self.queryset
-#         course = self.request.query_params.get("course")
-#         if course:
-#             queryset = queryset.filter(course_id=course)
-#         return queryset
-#
-#     def retrieve(self, request, *args, **kwargs):
-#         instance = self.get_object()
-#         serializer = self.get_serializer(instance)
-#         course = self.request.query_params.get("course")
-#         if course:
-#             module_data = serializer.data
-#             lessons = Lesson.objects.filter(module_id=instance, module__course_id=course)
-#             lesson_serializer = LessonSerializer(lessons, many=True, context={'request': request})
-#             module_data["lessons"] = lesson_serializer.data
-#             return Response(module_data)
-#         return Response(serializer.data)
+class ModuleViewSet(viewsets.ModelViewSet):
+    serializer_class = ModuleSerializer
+    queryset = Module.objects.all()
+
+    def get_queryset(self):
+        queryset = self.queryset
+        course = self.request.query_params.get("course")
+        if course:
+            queryset = queryset.filter(course_id=course)
+        return queryset
+
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        lessons = Lesson.objects.filter(module_id=instance)
+        if lessons:
+            module_data = serializer.data
+            lesson_serializer = LessonSerializer(lessons, many=True, context={'request': request})
+            module_data["lessons"] = lesson_serializer.data
+            return Response(module_data)
+        return Response(serializer.data)
 
 
 class LessonViewSet(viewsets.ModelViewSet):
@@ -156,11 +150,16 @@ class EnrollmentViewSet(viewsets.ModelViewSet):
             self.perform_create(serializer)
             course = self.request.data.get("course", None)
             if course:
-                # lesson = Lesson.objects.filter(module__course_id=course).first()
-                lesson = Lesson.objects.filter(course_id=course).first()
-                LessonProgress.objects.get_or_create(lesson_id=lesson.pk, user=request.user, is_opened=True)
-                course = Course.objects.get(id=course)
-                Ledger.objects.get_or_create(course=course, initial_balance=course.initial_balance, user=request.user)
+                module = Module.objects.filter(course_id=course).first()
+                if module:
+                    ModuleProgress.objects.get_or_create(module_id=module.pk, user=request.user)
+                lesson = Lesson.objects.filter(module_id=module).first()
+                if lesson:
+                    LessonProgress.objects.get_or_create(
+                        lesson_id=lesson.pk,
+                        user=request.user,
+                        is_opened=True
+                    )
             headers = self.get_success_headers(serializer.data)
             return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
         return Response({'error': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)

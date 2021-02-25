@@ -35,8 +35,17 @@ const CourseDetail = props => {
         isEnrolled,
         requestingEnroll,
         route: {
-            params: { id, title, description, image, author_name, author_image, is_enrolled },
-        },
+            params: {
+                id,
+                title,
+                description,
+                image,
+                author_id,
+                author_name,
+                author_image,
+                is_enrolled
+            }
+        }
     } = props;
 
     const [searchInput, toggleSearchInput] = useState(false);
@@ -53,17 +62,35 @@ const CourseDetail = props => {
         toggleSearchInput(!searchInput);
     }
 
-    const onPressModule = module => {
+    const onPressModule = (module, i) => {
         navigation.navigate('Module', {
-            course_id: id,
-            author_name,
-            author_image,
+            title,
             image,
-            module
+            author_id,
+            author_name,
+            description,
+            author_image,
+            course_id: id,
+            module_id: module.id,
+            isLastModule: modules.length === i
         });
     };
 
-    const { container, courseimage, courseDescription, heading, contentWrapper, button } = styles;
+    const onPressInstructor = () => {
+        navigation.navigate('InstructorCourses', {
+            id: author_id,
+            name:author_name,
+            image:author_image
+        })
+    }
+    
+    const {
+        container,
+        courseimage,
+        courseDescription,
+        heading,
+        contentWrapper,
+        button } = styles;
 
     return (
         <>
@@ -90,6 +117,7 @@ const CourseDetail = props => {
                 title={title}
                 name={author_name}
                 image={author_image}
+                action={onPressInstructor}
             />
             <Content showsVerticalScrollIndicator={false}>
                 <Image style={courseimage} source={{ uri: image }} />
@@ -128,7 +156,7 @@ const CourseDetail = props => {
                                                 key={module.id}
                                                 count={i}
                                                 module={module}
-                                                onPress={() => onPressModule(module)}
+                                                onPress={() => onPressModule(module, i + 1)}
                                             />
                                         ))}
                             </DataAvailability>

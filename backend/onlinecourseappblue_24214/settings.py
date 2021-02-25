@@ -141,7 +141,8 @@ ADMIN_REORDER = (
      'models': ('course.Category',
                 'course.Course',
                 'course.Enrollment',
-                'course.Ledger'
+                'course.Ledger',
+                'course.Module'
                 )
      },
     # Second group: same app, but different label

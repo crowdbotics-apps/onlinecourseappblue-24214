@@ -28,7 +28,7 @@ export function* mainSaga() {
     myCourses,
     categoryCourses,
     search,
-    // courseDetail,
+    courseDetail,
     module,
     LessonDetail,
     assignments,

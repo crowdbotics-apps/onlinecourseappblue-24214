@@ -23,23 +23,8 @@ export default StyleSheet.create({
         marginLeft: 5
     },
 
-    rangeText: {
-        marginLeft: 8
-    },
-
     text: {
         fontSize: 20,
         marginTop: 17
-    },
-
-    balance: {
-        width: '100%',
-        alignItems: 'flex-end'
-    },
-
-    balanceText: {
-        paddingHorizontal: 10,
-        paddingVertical: 2,
-        backgroundColor: 'white'
     }
 });

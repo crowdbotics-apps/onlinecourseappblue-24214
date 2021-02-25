@@ -23,7 +23,7 @@ const Lesson = ({ lesson, count, onPress }) => {
                     </View>
                 </View>
                 <View style={courseText}>
-                    {count > 0 && <Text text={`Lesson ${count}`} category="p2" numberOfLines={1} />}
+                    {<Text text={`Lesson ${count + 1}`} category="p2" numberOfLines={1} />}
                     <Text text={lesson.title} category="p2" bold numberOfLines={1} />
                 </View>
             </Card>

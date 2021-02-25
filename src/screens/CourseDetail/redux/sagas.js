@@ -67,7 +67,7 @@ function* enrollCourse({ data }) {
         yield call(enrollCourseAPI, data);
         yield put(enrollCourseSuccess());
         yield put(getModulesAction(data.course))
-        yield put(getCourses());
+        yield put(getCourses(1, ''));
     } catch (e) {
         yield put(enrollCourseFailure());
     }
