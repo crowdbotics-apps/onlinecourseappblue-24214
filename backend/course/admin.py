@@ -12,7 +12,7 @@ from .models import (
     GroceryAssignment, GroceryItems, Ledger, LifeHappensAssignment, RestaurantAssignment, RestaurantsItems,
     CreditCardAssignment, AssignmentProgress, Electronic, PersonalCare, HomeFurnishing, ElectronicItems,
     PersonalCareItems, HomeFurnishingItems,
-    EntertainmentItems, Entertainment, PaymentMethod, Introduction)
+    EntertainmentItems, Entertainment, PaymentMethod, Introduction, Module, ModuleProgress)
 from .utils import convert_second_to_time
 
 
@@ -85,7 +85,7 @@ class LessonAdminForm(forms.ModelForm):
 
 class LessonAdmin(admin.ModelAdmin):
     form = LessonAdminForm
-    list_display = ['title', 'course', 'media', 'duration']
+    list_display = ['title', 'module', 'media', 'duration']
 
     def save_model(self, request, obj, form, change):
         video = request.FILES.get('media')
@@ -307,16 +307,27 @@ class AssignmentProgressAdmin(admin.ModelAdmin):
     list_display = ['assignment', 'user']
 
 
-# class ModuleAdminForm(forms.ModelForm):
-#
-#     class Meta:
-#         model = Module
-#         fields = '__all__'
+class ModuleAdminForm(forms.ModelForm):
+
+    class Meta:
+        model = Module
+        fields = '__all__'
 
 
-# class ModuleAdmin(admin.ModelAdmin):
-#     form = ModuleAdminForm
-#     list_display = ['course', 'title']
+class ModuleAdmin(admin.ModelAdmin):
+    form = ModuleAdminForm
+    list_display = ['course', 'title']
+
+
+class ModuleProgressAdminForm(forms.ModelForm):
+    class Meta:
+        model = ModuleProgress
+        fields = '__all__'
+
+
+class ModuleProgressAdmin(admin.ModelAdmin):
+    form = ModuleProgressAdminForm
+    list_display = ['module', 'user']
 
 
 class EnrollmentAdminForm(forms.ModelForm):
@@ -410,7 +421,8 @@ admin.site.register(ElectronicItems, ElectronicItemsAdmin)
 admin.site.register(PersonalCareItems, PersonalCareItemsAdmin)
 admin.site.register(HomeFurnishingItems, HomeFurnishingItemsAdmin)
 admin.site.register(EntertainmentItems, EntertainmentItemsAdmin)
-# admin.site.register(Module, ModuleAdmin)
+admin.site.register(Module, ModuleAdmin)
+admin.site.register(ModuleProgress, ModuleProgressAdmin)
 admin.site.register(Enrollment, EnrollmentAdmin)
 admin.site.register(Assignment, AssignmentAdmin)
 admin.site.register(Subscription, SubscriptionAdmin)

@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
         paddingBottom: 27,
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: colors.biscay
+        backgroundColor: colors.morningGlory
     },
     back: {
         fontSize: 40,
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     menuIcon: {
-        color: colors.biscay,
+        color: colors.morningGlory,
         marginHorizontal: 15
     },
     badge: {

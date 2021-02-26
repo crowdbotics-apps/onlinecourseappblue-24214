@@ -6,7 +6,6 @@ import {
   Image,
   ActivityIndicator,
   StyleSheet,
-  ImageBackground,
   View,
   SafeAreaView
 } from 'react-native';
@@ -28,14 +27,12 @@ const OTP = props => {
   };
 
   return (
-    <ImageBackground
-      source={require('../../../assets/images/authBg.png')}
-      style={commonStyles.authBgImage}>
+    <View style={commonStyles.authBg}>
       <View style={commonStyles.authContainer}>
         <SafeAreaView>
           <Image
             style={commonStyles.logo}
-            source={require('../../../assets/images/Elevate.png')}
+            source={require('../../../assets/images/Crowdbotics.png')}
           />
         </SafeAreaView>
 
@@ -76,7 +73,7 @@ const OTP = props => {
           }
         />
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 

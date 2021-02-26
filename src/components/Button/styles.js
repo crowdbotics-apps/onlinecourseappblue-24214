@@ -7,7 +7,7 @@ export default StyleSheet.create({
     primaryText: {
         color: Colors.white,
     },
-    primaryBg: { backgroundColor: Colors.biscay },
+    primaryBg: { backgroundColor: Colors.morningGlory },
     secondaryText: {
         color: Colors.cornflowerBlue,
     },
@@ -25,6 +25,7 @@ export default StyleSheet.create({
     button: { borderRadius: 7 },
     buttonText: {
         fontSize: 12,
+        fontWeight: 'bold',
         // fontFamily: 'Gilroy-ExtraBold',
         ...Platform.select({
             ios: {

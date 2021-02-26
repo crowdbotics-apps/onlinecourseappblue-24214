@@ -16,6 +16,6 @@ export default StyleSheet.create({
         color: colors.white
     },
     active: {
-        color: colors.biscay
+        color: colors.morningGlory
     },
 });

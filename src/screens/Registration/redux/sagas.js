@@ -85,7 +85,6 @@ function resendOtpAPI(data) {
 }
 
 async function registerDeviceInfoAPI(data) {
-    console.log('DEVICE', data);
     const URL = `${appConfig.backendServerURL}/api/v1/device/${Platform.OS === 'ios' ? 'apns' : 'fcm'
         }/`;
     const FCMToken = await AsyncStorage.getItem('FCMToken');

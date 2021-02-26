@@ -11,7 +11,13 @@ import colors from 'src/styles/colors';
 import styles from './styles';
 
 const Course = ({ course, progress, onPress, size }) => {
-    const { lesson_progress, title, author_name, duration, is_enrolled } = course;
+    const {
+        lesson_progress,
+        title,
+        author_name,
+        duration,
+        is_enrolled,
+        subscription_status } = course;
     const {
         card,
         imageWrapper,
@@ -33,11 +39,17 @@ const Course = ({ course, progress, onPress, size }) => {
                         styles[`${size}ImageWrapper`],
                         !course.image && { backgroundColor: colors.alto }
                     ]}>
-                    {/* <Text
+                    <Text
                         text={status[subscription_status]}
                         bold category="p1"
-                        color={subscription_status === 0 ? 'secondary' : 'quaternary'}
-                        style={tagText} /> */}
+                        color={
+                            subscription_status === 0 ?
+                                'secondary'
+                            :
+                                'quaternary'
+                            }
+                        style={tagText}
+                    />
                     {course.image && (
                         <Image
                             source={{ uri: course.image }}
@@ -55,7 +67,7 @@ const Course = ({ course, progress, onPress, size }) => {
                     />
                     <Text
                         text={author_name}
-                        color='secondary'
+                        color='eleventh'
                         bold
                         category="p2"
                         style={text}
@@ -77,7 +89,7 @@ const Course = ({ course, progress, onPress, size }) => {
                     {progress && is_enrolled && (
                         <Progress.Bar
                             style={progressStyle}
-                            color={colors.biscay}
+                            color={colors.morningGlory}
                             unfilledColor={colors.alto}
                             progress={lesson_progress}
                         />

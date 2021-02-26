@@ -7,7 +7,7 @@ import { LoginManager, AccessToken } from 'react-native-fbsdk';
 import useForm from 'src/hooks/useForm';
 
 // components
-import { View, Image, ImageBackground, Linking, Platform } from 'react-native';
+import { View, Image, Linking, Platform } from 'react-native';
 import { Content, Icon } from 'native-base';
 import { Header, Text, Input, Button, BackIcon } from 'src/components';
 
@@ -72,7 +72,7 @@ const Registration = props => {
         return (
             <Image
                 style={commonStyles.logo}
-                source={require('../../assets/images/Elevate.png')}
+                source={require('../../assets/images/Crowdbotics.png')}
             />
         );
     };
@@ -142,10 +142,7 @@ const Registration = props => {
     };
 
     return (
-        <ImageBackground
-            source={require('../../assets/images/authBg.png')}
-            style={commonStyles.authBgImage}
-        >
+        <View style={commonStyles.authBg}>
             {Platform.OS === 'ios' && (
                 <Header
                     color='transparent'
@@ -270,7 +267,7 @@ const Registration = props => {
                     </Text>
                 </Content>
             </View>
-        </ImageBackground>
+        </View>
     );
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 // components
@@ -17,36 +17,32 @@ import {
 const LessonDetail = props => {
     const {
         user,
-        assignments,
+        lessons,
         isCompleted,
         navigation: { goBack, replace },
         route: {
             params: {
                 part_no,
                 courseId,
+                moduleId,
                 courseTitle,
-                currentBalance,
-                lesson: { id, title, description, media, is_completed },
-                setActiveTab
+                isLastLesson,
+                isLastModule,
+                lesson: {
+                    id,
+                    title,
+                    description,
+                    media,
+                    is_completed
+                }
             }
         }
     } = props;
 
-    const [isLastAssignment, setIsLastAssignment] = useState(false);
-    const [currentAssingment, setCurrentAssingment] = useState(false);
-
     useEffect(() => {
         props.reset();
-        setIsLastAssignment(false);
-        setCurrentAssingment(false);
-        assignments.map((assignment, i) => {
-            if(assignment.lesson.includes(id)){
-                setIsLastAssignment(
-                    assignments.length === (i + 1)
-                );
-                setCurrentAssingment(assignment);
-            }
-        })
+        // to remove
+        updateProgress();
     }, []);
 
     const updateProgress = () => {
@@ -56,22 +52,24 @@ const LessonDetail = props => {
                     lesson: id,
                     user: user.id
                 },
-                { courseId }
+                courseId,
+                { moduleId },
+                isLastLesson && isLastModule
             );
     };
 
-    const gotoAssignment = () => {
-        if (currentAssingment){
-            replace('Assignments', {
-                assignment: currentAssingment,
+    const gotoNext = () => {
+        if (!isLastLesson){
+            replace('LessonDetail', {
+                part_no: part_no + 1,
+                lesson: lessons[part_no],
                 courseId,
+                moduleId,
                 courseTitle,
-                currentBalance,
-                isLastAssignment,
-                setActiveTab
+                isLastModule,
+                isLastLesson: lessons.length === part_no + 1
             });
         } else {
-            setActiveTab(1);
             goBack();
         }
     };
@@ -106,9 +104,10 @@ const LessonDetail = props => {
                 <View style={button}>
                     <Text
                         text={
-                            `${part_no === 0  ? 
-                                'Introduction' : `Lesson ${part_no}`
-                            } completed!`
+                            isLastLesson && isLastModule ?
+                                'Course completed!'
+                            :
+                                `Lesson ${part_no} completed!`
                         }
                         category="h6"
                         bold
@@ -117,18 +116,28 @@ const LessonDetail = props => {
                     />
                     <View style={buttonWrapper}>
                         <Button
-                            text="Go to Assignment"
+                            text={
+                                isLastLesson ?
+                                    "Go Back"
+                                :
+                                    "Go to Next lesson"
+                                }
                             color="primary"
                             block
                             right={
                                 <Icon
                                     type="FontAwesome"
-                                    name="edit"
+                                    name={
+                                        isLastLesson ?
+                                            "caret-left"
+                                        :
+                                            "play"
+                                    }
                                     style={icon}
                                 />
                             }
                             style={buttonStyle}
-                            onPress={gotoAssignment}
+                            onPress={gotoNext}
                         />
                     </View>
                 </View>
@@ -139,13 +148,13 @@ const LessonDetail = props => {
 
 const mapStateToProps = state => ({
     user: state.app.user,
-    assignments: state.module.assignments,
+    lessons: state.module.lessons,
     isCompleted: state.lessonDetail.isCompleted
 });
 
 const mapDispatchToProps = dispatch => ({
-    updateLessonProgress: (data, moduleIds) =>
-        dispatch(updateLessonProgressAction(data, moduleIds)),
+    updateLessonProgress: (data, courseId, moduleId, isLast) =>
+        dispatch(updateLessonProgressAction(data, courseId, moduleId, isLast)),
     reset: () => dispatch(reset())
 });
 

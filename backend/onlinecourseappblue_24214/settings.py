@@ -141,7 +141,8 @@ ADMIN_REORDER = (
      'models': ('course.Category',
                 'course.Course',
                 'course.Enrollment',
-                'course.Ledger'
+                # 'course.Ledger',
+                'course.Module'
                 )
      },
     # Second group: same app, but different label
@@ -156,35 +157,34 @@ ADMIN_REORDER = (
                 )
      },
 
-    {'app': 'course', 'label': 'Course Assignments',
-     'models': ('course.Assignment',
-                # 'course.AssignmentProgress',
-                'course.Introduction',
-                'course.HousingAssignment',
-                'course.HousingItems',
-                'course.Transportation',
-                'course.TransportItems',
-                'course.ChildCare',
-                'course.ChildCareItems',
-                'course.GroceryAssignment',
-                'course.GroceryItems',
-                'course.LifeHappensAssignment',
-                'course.RestaurantAssignment',
-                'course.RestaurantsItems',
-                'course.CreditCardAssignment',
-                'course.Electronic',
-                'course.ElectronicItems',
-                # 'course.Clothing',
-                # 'course.ClothingItems',
-                'course.PersonalCare',
-                'course.PersonalCareItems',
-                'course.HomeFurnishing',
-                'course.HomeFurnishingItems',
-                'course.Entertainment',
-                'course.EntertainmentItems',
-
-                )
-     },
+    # {'app': 'course', 'label': 'Course Assignments',
+    #  'models': ('course.Assignment',
+    #             # 'course.AssignmentProgress',
+    #             'course.Introduction',
+    #             'course.HousingAssignment',
+    #             'course.HousingItems',
+    #             'course.Transportation',
+    #             'course.TransportItems',
+    #             'course.ChildCare',
+    #             'course.ChildCareItems',
+    #             'course.GroceryAssignment',
+    #             'course.GroceryItems',
+    #             'course.LifeHappensAssignment',
+    #             'course.RestaurantAssignment',
+    #             'course.RestaurantsItems',
+    #             'course.CreditCardAssignment',
+    #             'course.Electronic',
+    #             'course.ElectronicItems',
+    #             # 'course.Clothing',
+    #             # 'course.ClothingItems',
+    #             'course.PersonalCare',
+    #             'course.PersonalCareItems',
+    #             'course.HomeFurnishing',
+    #             'course.HomeFurnishingItems',
+    #             'course.Entertainment',
+    #             'course.EntertainmentItems',
+    #             )
+    #  },
 )
 
 if DEBUG:

@@ -91,33 +91,30 @@ class Course(models.Model):
 
     @property
     def duration(self):
-        lessons = Lesson.objects.filter(course_id=self.id).values_list('duration')
+        lessons = Lesson.objects.filter(module__course_id=self.id).values_list('duration')
         return str(sum(map(self.get_time_sum, lessons), timedelta()))
 
 
-# class Module(models.Model):
-#     """Generated Model"""
-#     course = models.ForeignKey(
-#         "course.Course", on_delete=models.CASCADE, related_name="module_course",
-#     )
-#     title = models.CharField(max_length=256,)
-#     description = models.TextField()
-#
-#     class Meta:
-#         verbose_name_plural = "Modules"
-#         ordering = ('pk',)
-#
-#     def __str__(self):
-#         return u'%s' % self.title
-#
+class Module(models.Model):
+    """Generated Model"""
+    course = models.ForeignKey(
+        "course.Course", on_delete=models.CASCADE, related_name="module_course",
+    )
+    title = models.CharField(max_length=256,)
+    description = models.TextField()
+
+    class Meta:
+        verbose_name_plural = "Modules"
+        ordering = ('pk',)
+
+    def __str__(self):
+        return u'%s' % self.title
+
 
 class Lesson(models.Model):
     """Lesson Model"""
-    # module = models.ForeignKey(
-    #     "course.Module", on_delete=models.CASCADE, related_name="lesson_module",
-    # )
-    course = models.ForeignKey(
-        "course.Course", on_delete=models.CASCADE, related_name="course_lesson",
+    module = models.ForeignKey(
+        "course.Module", on_delete=models.CASCADE, related_name="lesson_module"
     )
 
     title = models.CharField(max_length=256, )
@@ -591,3 +588,14 @@ class AssignmentProgress(models.Model):
 
     def __str__(self):
         return u'%s' % self.assignment
+
+
+class ModuleProgress(models.Model):
+    module = models.ForeignKey(Module, on_delete=models.PROTECT, related_name="module_progress")
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
+
+    class Meta:
+        verbose_name_plural = "Module Progress"
+
+    def __str__(self):
+        return u'%s' % self.module.title

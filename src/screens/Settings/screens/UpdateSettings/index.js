@@ -76,7 +76,7 @@ const UpdateSettings = props => {
             />
             <Switch
               trackColor={{ false: colors.doveGray, true: colors.doveGray }}
-              thumbColor={suggestClass ? colors.biscay : colors.white}
+              thumbColor={suggestClass ? colors.morningGlory : colors.white}
               ios_backgroundColor="#3e3e3e"
               onValueChange={val => setSuggestClass(val)}
               value={suggestClass}
@@ -89,14 +89,14 @@ const UpdateSettings = props => {
                 <Text text={item.title} category="s1" style={styles.item} />
                 <RadioButton
                   status={industryType === item.value ? 'checked' : 'unchecked'}
-                  color={colors.biscay}
+                  color={colors.morningGlory}
                   uncheckedColor={colors.doveGray}
                   onPress={() => setIndustryType(item.value)}
                 />
                 {/* <Checkbox.Item
                   style={{ marginRight: -16 }}
                   status={industry === item.value ? 'checked' : 'unchecked'}
-                  color={colors.biscay}
+                  color={colors.morningGlory}
                   uncheckedColor={colors.doveGray}
                   onPress={() => setIndustry(item.value)}
                 /> */}
@@ -115,7 +115,7 @@ const UpdateSettings = props => {
                 <Text text={item.title} category="s1" style={styles.item} />
                 <RadioButton
                   status={downloadType === item.value ? 'checked' : 'unchecked'}
-                  color={colors.biscay}
+                  color={colors.morningGlory}
                   uncheckedColor={colors.doveGray}
                   onPress={() => setDownloadType(item.value)}
                 />
@@ -134,7 +134,7 @@ const UpdateSettings = props => {
                 <Text text={item.title} category="s1" style={styles.item} />
                 <RadioButton
                   status={videoType === item.value ? 'checked' : 'unchecked'}
-                  color={colors.biscay}
+                  color={colors.morningGlory}
                   uncheckedColor={colors.doveGray}
                   onPress={() => setVideoType(item.value)}
                 />

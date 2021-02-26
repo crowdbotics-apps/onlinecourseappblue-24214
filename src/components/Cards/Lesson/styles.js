@@ -7,32 +7,36 @@ export default StyleSheet.create({
     course: {
         borderRadius: 8,
         marginBottom: 16,
-        paddingVertical: 10,
         flexDirection: 'row',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        alignItems: 'center'
     },
 
     courseImage: {
         width: 86,
+        paddingVertical: 15,
+        alignItems: 'center',
         justifyContent: 'center',
-        alignItems: 'center'
+        backgroundColor: colors.black
     },
 
     iconWrapper: {
-        borderRadius: 8,
-        paddingVertical: 8,
-        paddingHorizontal: 18,
-        backgroundColor: colors.persianRed,
+        width: 26,
+        height: 26,
+        borderRadius: 20,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: colors.doveGray
     },
 
     icon: {
-        color: colors.white,
-        fontSize: 20
+        fontSize: 12,
+        color: colors.white
     },
 
     courseText: {
         flex: 1,
-        justifyContent: 'center',
-        paddingHorizontal: 12
+        paddingHorizontal: 12,
+        justifyContent: 'center'
     }
 });

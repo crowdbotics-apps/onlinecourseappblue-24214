@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // components
-import { Image, ImageBackground, View, ActivityIndicator, SafeAreaView } from 'react-native';
+import { Image, View, ActivityIndicator, SafeAreaView } from 'react-native';
 import { Content } from 'native-base';
 import { Text, CodeVerificationInput3 } from 'src/components';
 
@@ -22,15 +22,12 @@ const OTP = props => {
   };
 
   return (
-    <ImageBackground
-      source={require('../../../assets/images/authBg.png')}
-      style={commonStyles.authBgImage}
-    >
+    <View style={commonStyles.authBg}>
       <View style={commonStyles.authContainer}>
         <SafeAreaView>
           <Image
             style={commonStyles.logo}
-            source={require('../../../assets/images/Elevate.png')}
+            source={require('../../../assets/images/Crowdbotics.png')}
           />
         </SafeAreaView>
       <Content showsVerticalScrollIndicator={false}>
@@ -58,7 +55,7 @@ const OTP = props => {
         )}
       </Content>
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 

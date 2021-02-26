@@ -23,6 +23,9 @@ import {
     resetEnrolled as resetEnrolledAction
 } from './redux/actions';
 
+// utils
+import { errorAlert } from 'src/utils/alerts';
+
 // styles
 import styles from './styles';
 
@@ -35,8 +38,18 @@ const CourseDetail = props => {
         isEnrolled,
         requestingEnroll,
         route: {
-            params: { id, title, description, image, author_name, author_image, is_enrolled },
-        },
+            params: {
+                id,
+                title,
+                description,
+                image,
+                author_id,
+                author_name,
+                author_image,
+                is_enrolled,
+                subscription_status
+            }
+        }
     } = props;
 
     const [searchInput, toggleSearchInput] = useState(false);
@@ -53,17 +66,50 @@ const CourseDetail = props => {
         toggleSearchInput(!searchInput);
     }
 
-    const onPressModule = module => {
+    const onPressModule = (module, i) => {
         navigation.navigate('Module', {
-            course_id: id,
-            author_name,
-            author_image,
+            title,
             image,
-            module
+            author_id,
+            author_name,
+            description,
+            author_image,
+            course_id: id,
+            module_id: module.id,
+            isLastModule: modules.length === i
         });
     };
 
-    const { container, courseimage, courseDescription, heading, contentWrapper, button } = styles;
+    const onPressInstructor = () => {
+        navigation.navigate('InstructorCourses', {
+            id: author_id,
+            name:author_name,
+            image:author_image
+        })
+    }
+    
+    const onPressEnroll = () => {
+        if (subscription_status) {
+            if (Boolean(user.subscription_plan)) {
+                props.enrollCourse({ course: id, user: user.id });
+            } else {
+                errorAlert(
+                    `Please upgrade your subscription plan to enroll in ${title} course.`,
+                    'Alert'
+                );
+            }
+        } else {
+            props.enrollCourse({ course: id, user: user.id });
+        }
+    }
+    
+    const {
+        container,
+        courseimage,
+        courseDescription,
+        heading,
+        contentWrapper,
+        button } = styles;
 
     return (
         <>
@@ -90,6 +136,7 @@ const CourseDetail = props => {
                 title={title}
                 name={author_name}
                 image={author_image}
+                action={onPressInstructor}
             />
             <Content showsVerticalScrollIndicator={false}>
                 <Image style={courseimage} source={{ uri: image }} />
@@ -107,7 +154,7 @@ const CourseDetail = props => {
                             style={button}
                             color="primary"
                             block
-                            onPress={() => props.enrollCourse({ course: id, user: user.id })}
+                            onPress={onPressEnroll}
                             loading={requestingEnroll}
                             disabled={requestingEnroll}
                         />
@@ -128,7 +175,7 @@ const CourseDetail = props => {
                                                 key={module.id}
                                                 count={i}
                                                 module={module}
-                                                onPress={() => onPressModule(module)}
+                                                onPress={() => onPressModule(module, i + 1)}
                                             />
                                         ))}
                             </DataAvailability>

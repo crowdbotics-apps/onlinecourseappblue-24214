@@ -7,34 +7,34 @@ import { Text } from 'src/components';
 import styles from './styles';
 
 // constants
-import { keyNameMapping } from 'src/utils/constants';
+// import { keyNameMapping } from 'src/utils/constants';
 
 const Ledger = props => {
     const { ledger, assignmentTypes } = props;
     const [ledgerData, setLedgerData] = useState(false);
 
     useEffect(() => {
-        if (ledger) {
-            let data = [[
-                'Net HouseHold income',
-                null,
-                `$${Number(ledger.initial_balance).toFixed(0)}`
-            ]];
-            let balance = ledger.initial_balance;
-            keyNameMapping
-            .filter(obj => assignmentTypes.includes(obj.type))
-            .map(obj => {
-                const cost = ledger[obj.key];
-                const e = [
-                    obj.name,
-                    cost > 0 ? `$${Number(cost).toFixed(0)}` : '$0',
-                    cost && `$${balance - cost}`
-                ];
-                balance = Number(balance - cost).toFixed(0);
-                data.push(e);
-            });
-            setLedgerData(data);
-        }
+        // if (ledger) {
+        //     let data = [[
+        //         'Net HouseHold income',
+        //         null,
+        //         `$${Number(ledger.initial_balance).toFixed(0)}`
+        //     ]];
+        //     let balance = ledger.initial_balance;
+        //     keyNameMapping
+        //     .filter(obj => assignmentTypes.includes(obj.type))
+        //     .map(obj => {
+        //         const cost = ledger[obj.key];
+        //         const e = [
+        //             obj.name,
+        //             cost > 0 ? `$${Number(cost).toFixed(0)}` : '$0',
+        //             cost && `$${balance - cost}`
+        //         ];
+        //         balance = Number(balance - cost).toFixed(0);
+        //         data.push(e);
+        //     });
+        //     setLedgerData(data);
+        // }
     }, [ledger]);
 
     return (

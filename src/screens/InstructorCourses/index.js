@@ -37,14 +37,16 @@ const InstructorCourses = props => {
     }, []);
     
     const onPressCourse = course => {
-        props.navigation.navigate('Module', {
+        props.navigation.navigate('CourseDetail', {
             id: course.id,
             title: course.title,
             description: course.description,
             image: course.image,
+            author_id: course.author,
             author_name: course.author_name,
             author_image: course.author_image,
-            is_enrolled: course.is_enrolled
+            is_enrolled: course.is_enrolled,
+            subscription_status: course.subscription_status
         });
     };
     

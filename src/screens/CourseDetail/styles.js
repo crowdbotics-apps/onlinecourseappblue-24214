@@ -29,6 +29,7 @@ export default StyleSheet.create({
     },
 
     courseDescription: {
-        marginTop: 22
+        marginTop: 22,
+        textAlign: 'left'
     }
 });

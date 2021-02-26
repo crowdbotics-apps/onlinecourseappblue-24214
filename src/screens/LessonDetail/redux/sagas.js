@@ -6,7 +6,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import XHR from 'src/utils/XHR';
 
 // actions
-import { getEnrolledCourses } from 'src/screens/MyCourses/redux/actions';
+import { getModules } from 'src/screens/CourseDetail/redux/actions';
 import { getLessons } from 'src/screens/Module/redux/actions';
 import { updateLessonProgressSuccess, reset as resetAction } from './actions';
 
@@ -14,6 +14,9 @@ import { updateLessonProgressSuccess, reset as resetAction } from './actions';
 import {
     UPDATE_LESSON_PROGRESS,
 } from './types';
+
+// utils
+import { successAlert } from 'src/utils/alerts';
 
 async function addLessonProgressAPI(data) {
     const authToken = await AsyncStorage.getItem('authToken');
@@ -31,13 +34,17 @@ async function addLessonProgressAPI(data) {
     return XHR(URL, options);
 }
 
-function* addLessonProgress({ data, moduleIds }) {
+function* addLessonProgress({ data, courseId, moduleId, isLast }) {
     try {
         yield call(addLessonProgressAPI, data);
         yield put(updateLessonProgressSuccess());
 
-        yield put(getLessons(moduleIds.courseId));
-        yield put(getEnrolledCourses(''));
+        isLast && successAlert(
+            'Thanks for completion.\n We will email your certificate soon..'
+        );
+
+        yield put(getLessons(moduleId.moduleId));
+        yield put(getModules(courseId));
     } catch (e) {
         yield put(resetAction());
     }

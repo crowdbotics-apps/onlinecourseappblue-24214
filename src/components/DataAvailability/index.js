@@ -16,7 +16,7 @@ const DataAvailability = ({ requesting, hasData, children, style }) => {
     if (requesting) {
         return (
             <View style={[styles.container, style, !style && styles.center]}>
-                <ActivityIndicator size="large" color={colors.biscay} />
+                <ActivityIndicator size="large" color={colors.morningGlory} />
             </View>
         )
     }

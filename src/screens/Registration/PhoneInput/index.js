@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // components
-import { Image, ImageBackground, View, Platform, StyleSheet } from 'react-native';
+import { Image, View, Platform, StyleSheet } from 'react-native';
 import { Content } from 'native-base';
 import {
     Text,
@@ -67,10 +67,7 @@ const PhoneInput = props => {
     };
 
     return (
-        <ImageBackground
-            source={require('../../../assets/images/authBg.png')}
-            style={commonStyles.authBgImage}
-        >
+        <View style={commonStyles.authBg}>
             {Platform.OS === 'ios' && (
                 <Header color="transparent" left={<BackIcon color="tertiary" action={() => goBack()} />} />
             )}
@@ -78,7 +75,7 @@ const PhoneInput = props => {
                 <Content showsVerticalScrollIndicator={false}>
                     <Image
                         style={[commonStyles.logo, { marginTop: 0 }]}
-                        source={require('../../../assets/images/Elevate.png')}
+                        source={require('../../../assets/images/Crowdbotics.png')}
                     />
 
                     <Text
@@ -104,7 +101,7 @@ const PhoneInput = props => {
                     />
                 </Content>
             </View>
-        </ImageBackground>
+        </View>
     );
 };
 

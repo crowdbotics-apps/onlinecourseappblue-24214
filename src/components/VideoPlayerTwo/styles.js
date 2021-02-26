@@ -17,7 +17,7 @@ export default StyleSheet.create({
     },
     transparentInput: {
         backgroundColor: 'transparent',
-        borderColor: Colors.biscay,
+        borderColor: Colors.morningGlory,
         color: Colors.white,
         marginHorizontal: 0
     },

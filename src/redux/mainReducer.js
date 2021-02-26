@@ -36,7 +36,7 @@ export const combinedReducers = {
   myCourses,
   categoryCourses,
   search,
-  // courseDetail,
+  courseDetail,
   module,
   lessonDetail,
   assignments,

@@ -16,7 +16,7 @@ export default StyleSheet.create({
         backgroundColor: colors.pictonBlue
     },
     active: {
-        backgroundColor: colors.biscay
+        backgroundColor: colors.morningGlory
     },
     bold: {
         fontWeight: 'bold'
