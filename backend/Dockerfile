@@ -4,7 +4,8 @@ ENV LANG C.UTF-8
 ARG DEBIAN_FRONTEND=noninteractive
 # Allow SECRET_KEY to be passed via arg so collectstatic can run during build time
 ARG SECRET_KEY
-
+RUN python3 -m pip install -U pip
+RUN python3 -m pip install -U setuptools
 # libpq-dev and python3-dev help with psycopg2
 RUN apt-get update \
   && apt-get install -y python3.7-dev python3-pip libpq-dev curl ffmpeg\
