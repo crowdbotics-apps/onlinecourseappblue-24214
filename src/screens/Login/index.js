@@ -5,7 +5,7 @@ import { LoginManager, AccessToken } from 'react-native-fbsdk';
 import Clipboard from '@react-native-community/clipboard';
 
 // components
-import { Image, ImageBackground, View, SafeAreaView } from 'react-native';
+import { Image, View, SafeAreaView } from 'react-native';
 import { Content, Icon } from 'native-base';
 import { Text, Input, Button, HorizontalRule } from 'src/components';
 
@@ -120,15 +120,12 @@ const Login = props => {
     };
 
     return (
-        <ImageBackground
-            source={require('../../assets/images/authBg.png')}
-            style={commonStyles.authBgImage}
-        >
+        <View style={commonStyles.authBg}>
             <View style={commonStyles.authContainer}>
                 <SafeAreaView>
                     <Image
                         style={commonStyles.logo}
-                        source={require('../../assets/images/Elevate.png')}
+                        source={require('../../assets/images/Crowdbotics.png')}
                     />
                 </SafeAreaView>
                 <Content showsVerticalScrollIndicator={false}>
@@ -190,7 +187,7 @@ const Login = props => {
                             />
                         }
                     />
-                    <Button
+                    {/* <Button
                         text="Sign in with Apple"
                         color="apple"
                         block
@@ -207,7 +204,7 @@ const Login = props => {
                                 style={[styles.socialIcon, styles.appleIcon]}
                             />
                         }
-                    />
+                    /> */}
 
                     <HorizontalRule />
 
@@ -226,10 +223,10 @@ const Login = props => {
                         onPress={() => navigate('Registration')}
                         style={styles.register}
                     />
-                    <Image source={require('../../assets/images/truesky-logo.png')} style={styles.trueSkyLogo} />
+                    {/* <Image source={require('../../assets/images/truesky-logo.png')} style={styles.trueSkyLogo} /> */}
                 </Content>
             </View>
-        </ImageBackground>
+        </View>
     );
 };
 

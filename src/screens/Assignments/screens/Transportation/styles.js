@@ -17,7 +17,7 @@ export default StyleSheet.create({
         backgroundColor: colors.pictonBlue
     },
     active: {
-        backgroundColor: colors.biscay
+        backgroundColor: colors.morningGlory
     },
     head: {
         backgroundColor: colors.pictonBlue
@@ -36,7 +36,7 @@ export default StyleSheet.create({
         color: colors.doveGray
     },
     colValue: {
-        backgroundColor: colors.biscay
+        backgroundColor: colors.morningGlory
     },
     colValueText: {
         margin: 3,

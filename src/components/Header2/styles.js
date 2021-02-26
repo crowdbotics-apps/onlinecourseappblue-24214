@@ -2,7 +2,7 @@ import { StyleSheet, Platform } from 'react-native';
 import colors from 'src/styles/colors';
 
 export default StyleSheet.create({
-    primary: { backgroundColor: colors.biscay },
+    primary: { backgroundColor: colors.morningGlory },
 
     secondary: { backgroundColor: colors.white },
 

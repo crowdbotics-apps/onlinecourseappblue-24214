@@ -11,7 +11,7 @@ export default StyleSheet.create({
 
     icon: {
         fontSize: 25,
-        color: colors.biscay
+        color: colors.morningGlory
     },
 
     dataWrapper: {

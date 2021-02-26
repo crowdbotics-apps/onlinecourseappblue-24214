@@ -25,7 +25,7 @@ export default StyleSheet.create({
     },
     total: {
         borderTopWidth: 2,
-        backgroundColor: colors.biscay
+        backgroundColor: colors.morningGlory
     },
     title: {
         marginLeft: 5

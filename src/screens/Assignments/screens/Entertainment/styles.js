@@ -25,7 +25,7 @@ export default StyleSheet.create({
     },
     costColValue: {
         borderWidth: 1,
-        backgroundColor: colors.biscay
+        backgroundColor: colors.morningGlory
     },
     costColText: {
         margin: 3,

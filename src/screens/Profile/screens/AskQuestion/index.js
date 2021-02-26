@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
 
     button: {
         marginVertical: 10,
-        backgroundColor: colors.biscay
+        backgroundColor: colors.morningGlory
     },
 });
 

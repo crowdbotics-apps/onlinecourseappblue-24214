@@ -34,7 +34,7 @@ export default StyleSheet.create({
     filterIcon: {
         flex: 0,
         alignSelf: 'flex-end',
-        backgroundColor: colors.biscay,
+        backgroundColor: colors.morningGlory,
         padding: 8,
         borderRadius: 8
     },

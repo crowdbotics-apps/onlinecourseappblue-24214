@@ -3,6 +3,7 @@ export default {
     black: '#000',
     green: '#008000',
     biscay: '#1C3D6E',
+    morningGlory: '#95C4DB',
     cornflowerBlue: '#6973FB',
     sanMarino: '#4065AF',
     doveGray: '#6A6A6A',

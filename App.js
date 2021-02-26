@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, StatusBar } from 'react-native';
 import { Provider as ReduxProvider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -18,6 +18,9 @@ import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import { mapping } from '@eva-design/eva';
 import SplashScreen from './src/screens/Splash';
 
+// colors
+import colors from 'src/styles/colors'
+
 // config
 import { store } from './src/redux/store';
 import { crowdboticsTheme } from './src/config/crowdboticsTheme';
@@ -32,6 +35,10 @@ export default class App extends React.Component {
     isLoaded: false
   };
 
+  componentDidMount() {
+    StatusBar.setBackgroundColor(colors.morningGlory);
+  }
+
   async componentWillMount() {
     Platform.OS === 'ios' &&
       PushNotificationIOS.getInitialNotification().then(notification => {
@@ -44,7 +51,8 @@ export default class App extends React.Component {
             author,
             author_name,
             author_image,
-            is_enrolled
+            is_enrolled,
+            subscription_status
           } = notification._data.course;
 
           navigate('CourseDetail', {
@@ -55,7 +63,8 @@ export default class App extends React.Component {
             author_id: author,
             author_name,
             author_image,
-            is_enrolled
+            is_enrolled,
+            subscription_status
           });
         }
       });
@@ -85,6 +94,7 @@ export default class App extends React.Component {
         <IconRegistry icons={EvaIconsPack} />
         <ApplicationProvider mapping={mapping} theme={crowdboticsTheme}>
           <Root>
+            <StatusBar barStyle="dark-content" />
             <NavigatorProvider style={[styles.flex]}>
               <Layout style={[styles.flex]}>
                 <SplashScreen />

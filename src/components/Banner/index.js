@@ -41,7 +41,7 @@ const Banner = ({
                     />
                     <Text text={name} color={color} style={text} numberOfLines={1} bold />
                     {loading && (
-                        <ActivityIndicator size="large" color={colors.biscay} />
+                        <ActivityIndicator size="large" color={colors.morningGlory} />
                     )}
                 </>
             ) : (

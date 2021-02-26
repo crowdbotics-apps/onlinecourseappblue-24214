@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 
 // components
-import { Image, ImageBackground, View, Platform } from 'react-native';
+import { Image, View, Platform } from 'react-native';
 import { Content } from 'native-base';
 import {
     Text,
@@ -70,11 +70,8 @@ const ForgotPassword = props => {
     };
 
     return (
-            <ImageBackground
-                source={require('../../assets/images/authBg.png')}
-                style={commonStyles.authBgImage}
-            >
-                {Platform.OS === 'ios' && (
+        <View style={commonStyles.authBg}>
+            {Platform.OS === 'ios' && (
                 <Header
                     color='transparent'
                     left={
@@ -86,7 +83,7 @@ const ForgotPassword = props => {
                 <Content showsVerticalScrollIndicator={false}>
                     <Image
                         style={[commonStyles.logo, { marginTop: 0 }]}
-                        source={require('../../assets/images/Elevate.png')}
+                        source={require('../../assets/images/Crowdbotics.png')}
                     />
 
                     <Text
@@ -127,7 +124,7 @@ const ForgotPassword = props => {
                     />
                 </Content>
             </View>
-            </ImageBackground>
+        </View>
     );
 };
 

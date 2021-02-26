@@ -23,6 +23,9 @@ import {
     resetEnrolled as resetEnrolledAction
 } from './redux/actions';
 
+// utils
+import { errorAlert } from 'src/utils/alerts';
+
 // styles
 import styles from './styles';
 
@@ -43,7 +46,8 @@ const CourseDetail = props => {
                 author_id,
                 author_name,
                 author_image,
-                is_enrolled
+                is_enrolled,
+                subscription_status
             }
         }
     } = props;
@@ -82,6 +86,21 @@ const CourseDetail = props => {
             name:author_name,
             image:author_image
         })
+    }
+    
+    const onPressEnroll = () => {
+        if (subscription_status) {
+            if (Boolean(user.subscription_plan)) {
+                props.enrollCourse({ course: id, user: user.id });
+            } else {
+                errorAlert(
+                    `Please upgrade your subscription plan to enroll in ${title} course.`,
+                    'Alert'
+                );
+            }
+        } else {
+            props.enrollCourse({ course: id, user: user.id });
+        }
     }
     
     const {
@@ -135,7 +154,7 @@ const CourseDetail = props => {
                             style={button}
                             color="primary"
                             block
-                            onPress={() => props.enrollCourse({ course: id, user: user.id })}
+                            onPress={onPressEnroll}
                             loading={requestingEnroll}
                             disabled={requestingEnroll}
                         />

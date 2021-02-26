@@ -45,7 +45,8 @@ const InstructorCourses = props => {
             author_id: course.author,
             author_name: course.author_name,
             author_image: course.author_image,
-            is_enrolled: course.is_enrolled
+            is_enrolled: course.is_enrolled,
+            subscription_status: course.subscription_status
         });
     };
     

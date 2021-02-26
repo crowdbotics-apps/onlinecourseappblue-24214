@@ -24,7 +24,7 @@ const Subscription = props => {
             />
             <Container style={container}>
                 <View style={heading}>
-                    <Text text="Current Subscription" category="h6" style={title} />
+                    <Text text="Current Subscription" category="h6" style={title} bold />
                     <Text
                         text={subscription_plan ? 'Premium' : 'Free'}
                         color="septenary"
