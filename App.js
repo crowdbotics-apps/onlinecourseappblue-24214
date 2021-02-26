@@ -41,16 +41,18 @@ export default class App extends React.Component {
             title,
             description,
             image,
+            author,
             author_name,
             author_image,
             is_enrolled
           } = notification._data.course;
 
-          navigate('Module', {
+          navigate('CourseDetail', {
             id,
             title,
             description,
             image,
+            author_id: author,
             author_name,
             author_image,
             is_enrolled

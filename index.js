@@ -30,17 +30,19 @@ PushNotification.configure({
             title,
             description,
             image,
+            author,
             author_name,
             author_image,
             is_enrolled
         } = Platform.OS === 'android' ? JSON.parse(notification.data.course) : notification.data.course;
 
         !foreground &&
-            navigate('Module', {
+            navigate('CourseDetail', {
                 id,
                 title,
                 description,
                 image,
+                author_id: author,
                 author_name,
                 author_image,
                 is_enrolled,
