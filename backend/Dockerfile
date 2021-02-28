@@ -15,7 +15,7 @@ WORKDIR /opt/webapp
 COPY . .
 RUN python3 -m pip install -U pip
 RUN python3 -m pip install -U setuptools
-RUN pip3 install --no-cache-dir -q 'pipenv==2018.11.26' && pipenv install --deploy --system
+RUN pip3 install --no-cache-dir -q 'pipenv==2018.11.26' && pipenv install --deploy --system --sequential
 
 RUN python3 manage.py collectstatic --no-input
 
