@@ -3,8 +3,10 @@ import colors from 'src/styles/colors';
 
 export default StyleSheet.create({
     container: {
-        backgroundColor: colors.whisper,
-        paddingHorizontal: 22,
+        backgroundColor: colors.whisper
+    },
+    content: {
+        paddingHorizontal: 22
     },
     courseWrapper: {
         paddingVertical: 30
@@ -32,7 +34,7 @@ export default StyleSheet.create({
     filterIcon: {
         flex: 0,
         alignSelf: 'flex-end',
-        backgroundColor: colors.biscay,
+        backgroundColor: colors.morningGlory,
         padding: 8,
         borderRadius: 8
     },

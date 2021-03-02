@@ -2,19 +2,20 @@ import { StyleSheet, Platform } from 'react-native';
 import colors from 'src/styles/colors';
 
 export default StyleSheet.create({
-    fontFamily: { fontFamily: 'Gilroy-Light' },
+    // fontFamily: { fontFamily: 'Gilroy-Light' },
     fontFamilyBold: {
-        fontFamily: 'Gilroy-ExtraBold',
+        // fontFamily: 'Gilroy-ExtraBold',
+        fontWeight: 'bold',
         ...Platform.select({
             ios: {
                 fontWeight: 'bold',
-            },
-        }),
+            }
+        })
     },
     fontSize: { fontSize: 14 },
 
     primary: { color: colors.white },
-    secondary: { color: colors.biscay },
+    secondary: { color: colors.morningGlory },
     tertiary: { color: colors.bismark },
     quaternary: { color: colors.wildWillow },
     quinary: { color: colors.cornflowerBlue },
@@ -24,6 +25,7 @@ export default StyleSheet.create({
     nonary: { color: colors.green },
     denary: { color: colors.deepBlush },
     undenary: { color: colors.pictonBlue },
+    eleventh: { color: colors.biscay },
 
     underline: { textDecorationLine: 'underline' },
 

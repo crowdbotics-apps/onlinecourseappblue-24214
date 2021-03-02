@@ -8,6 +8,7 @@ import {
     Category,
     Input,
     Text,
+    Footer,
     FilterIcon,
     SearchIcon as CrossIcon,
     Course,
@@ -78,14 +79,16 @@ const Search = props => {
     };
 
     const onPressCourse = course => {
-        props.navigation.navigate('Module', {
+        props.navigation.navigate('CourseDetail', {
             id: course.id,
             title: course.title,
             description: course.description,
             image: course.image,
+            author_id: course.author,
             author_name: course.author_name,
             author_image: course.author_image,
-            is_enrolled: course.is_enrolled
+            is_enrolled: course.is_enrolled,
+            subscription_status: course.subscription_status
         });
     };
 
@@ -100,7 +103,8 @@ const Search = props => {
     const requestingMore = () => requesting && <ActivityIndicator color="#1C3D6E" />
 
     const {
-        container,
+        containerMain,
+        contentWrapper,
         headingWrapper,
         catagoryHeading,
         columnWrapperStyle
@@ -122,28 +126,29 @@ const Search = props => {
                     )
                 }
             />
-            <Container style={container}>
-                <View style={input}>
-                    <Input
-                        value={query}
-                        maxLength={40}
-                        returnKeyType="search"
-                        onSubmitEditing={() => search()}
-                        placeholder="Enter Search query"
-                        onChangeText={val => setQuery(val)}
-                    />
-                </View>
-
-                <View style={headingWrapper}>
-                    <View style={catagoryHeading}>
-                        <Text
-                            text={showFilter ? 'Select from Categories' : 'Search Results'}
-                            bold
-                            category="h5"
+            <Container style={containerMain}>
+                <View style={contentWrapper}>
+                    <View style={input}>
+                        <Input
+                            value={query}
+                            maxLength={40}
+                            returnKeyType="search"
+                            onSubmitEditing={() => search()}
+                            placeholder="Enter Search query"
+                            onChangeText={val => setQuery(val)}
                         />
                     </View>
-                    <FilterIcon action={onPressFilter} />
-                </View>
+
+                    <View style={headingWrapper}>
+                        <View style={catagoryHeading}>
+                            <Text
+                                text={showFilter ? 'Select from Categories' : 'Search Results'}
+                                bold
+                                category="h5"
+                            />
+                        </View>
+                        <FilterIcon action={onPressFilter} />
+                    </View>
                     {showFilter &&
                         categories &&
                         categories.map(category => (
@@ -159,7 +164,7 @@ const Search = props => {
                         style={dataWrapper}>
                         {courses && numColumns && (
                             <FlatList
-                                key={numColumns > 2 ? '_': '$'}
+                                key={numColumns > 2 ? '_' : '$'}
                                 keyExtractor={item => item.id}
                                 onEndReached={loadMore}
                                 onEndReachedThreshold={0.1}
@@ -172,6 +177,8 @@ const Search = props => {
                             />
                         )}
                     </DataAvailability>
+                </View>
+                <Footer props={props} activeScreen="Search" />
             </Container>
         </>
     );

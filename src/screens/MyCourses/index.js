@@ -3,8 +3,17 @@ import { View, StyleSheet, FlatList, ActivityIndicator, Dimensions } from 'react
 import { connect } from 'react-redux';
 
 // components
-import { Container, Content } from 'native-base';
-import { Header, Input, BackIcon, SearchIcon, FilterIcon, Course, DataAvailability } from 'src/components';
+import { Container } from 'native-base';
+import {
+    Header,
+    Input,
+    BackIcon,
+    SearchIcon,
+    FilterIcon,
+    Course,
+    Footer,
+    DataAvailability
+} from 'src/components';
 
 // styles
 import commonStyle from 'src/styles/common';
@@ -31,14 +40,16 @@ const MyCourses = props => {
     }, []);
 
     const onPressCourse = course => {
-        props.navigation.navigate('Module', {
+        props.navigation.navigate('CourseDetail', {
             id: course.id,
             title: course.title,
             description: course.description,
             image: course.image,
+            author_id: course.author,
             author_name: course.author_name,
             author_image: course.author_image,
-            is_enrolled: course.is_enrolled
+            is_enrolled: course.is_enrolled,
+            subscription_status: course.subscription_status
         });
     };
 
@@ -70,7 +81,8 @@ const MyCourses = props => {
     const requestingMore = () => requesting && <ActivityIndicator color="#1C3D6E" />
 
     const {
-        container,
+        containerMain,
+        contentWrapper,
         headingWrapper,
         catagoryHeading,
         columnWrapperStyle } = commonStyle;
@@ -79,7 +91,7 @@ const MyCourses = props => {
         <>
             <Header
                 color="primary"
-                title='My Courses'
+                title="My Courses"
                 input={searchInput &&
                     <Input
                         autoFocus
@@ -98,30 +110,33 @@ const MyCourses = props => {
                     name={searchInput ? 'times-circle' : 'search'}
                 />}
             />
-            <Container style={container}>
-                <View style={headingWrapper}>
-                    <View style={catagoryHeading} />
-                    {/* <FilterIcon /> */}
+            <Container style={containerMain}>
+                <View style={contentWrapper}>
+                    <View style={headingWrapper}>
+                        <View style={catagoryHeading} />
+                        {/* <FilterIcon /> */}
+                    </View>
+                    <DataAvailability
+                        requesting={requesting && !courses}
+                        hasData={Boolean(courses)}
+                        style={styles.dataWrapper}>
+                        {courses && numColumns && (
+                            <FlatList
+                                key={numColumns > 2 ? '_': '$'}
+                                keyExtractor={item => item.id}
+                                onEndReached={loadMore}
+                                onEndReachedThreshold={0.1}
+                                numColumns={numColumns}
+                                columnWrapperStyle={columnWrapperStyle}
+                                data={courses}
+                                renderItem={renderItem}
+                                ListFooterComponent={requestingMore}
+                                showsVerticalScrollIndicator={false}
+                            />
+                        )}
+                    </DataAvailability>
                 </View>
-                <DataAvailability
-                    requesting={requesting && !courses}
-                    hasData={Boolean(courses)}
-                    style={styles.dataWrapper}>
-                    {courses && numColumns && (
-                        <FlatList
-                            key={numColumns > 2 ? '_': '$'}
-                            keyExtractor={item => item.id}
-                            onEndReached={loadMore}
-                            onEndReachedThreshold={0.1}
-                            numColumns={numColumns}
-                            columnWrapperStyle={columnWrapperStyle}
-                            data={courses}
-                            renderItem={renderItem}
-                            ListFooterComponent={requestingMore}
-                            showsVerticalScrollIndicator={false}
-                        />
-                    )}
-                </DataAvailability>
+                <Footer props={props} activeScreen="MyCourses" />
             </Container>
         </>
     );

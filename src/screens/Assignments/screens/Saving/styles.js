@@ -31,7 +31,7 @@ export default StyleSheet.create({
         paddingHorizontal: 20
     },
     heading: {
-        backgroundColor: colors.biscay
+        backgroundColor: colors.morningGlory
     },
     table: {
         borderWidth: 1
@@ -48,11 +48,11 @@ export default StyleSheet.create({
     },
     text: {
         margin: 5,
-        color: colors.biscay
+        color: colors.morningGlory
     },
     tableHeadText: {
         margin: 5,
-        color: colors.biscay,
+        color: colors.morningGlory,
         fontWeight: 'bold'
     }
 });

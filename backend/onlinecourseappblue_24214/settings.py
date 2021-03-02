@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django_filters",
     "course.apps.CourseConfig",
+    "payments.apps.PaymentsConfig",
 ]
 LOCAL_APPS = [
     'home',
@@ -77,7 +78,8 @@ THIRD_PARTY_APPS = [
     "django_twilio",
     "storages",
     'push_notifications',
-    'admin_reorder'
+    'admin_reorder',
+    'djstripe'
 ]
 INSTALLED_APPS += LOCAL_APPS + THIRD_PARTY_APPS
 
@@ -95,6 +97,7 @@ MIDDLEWARE = [
 ADMIN_REORDER = (
     {'app': 'users', 'label': 'Users',
      'models': ('users.User',
+                'users.UserSettings',
                 )
      },
 
@@ -138,7 +141,8 @@ ADMIN_REORDER = (
      'models': ('course.Category',
                 'course.Course',
                 'course.Enrollment',
-                'course.Ledger'
+                # 'course.Ledger',
+                'course.Module'
                 )
      },
     # Second group: same app, but different label
@@ -148,35 +152,39 @@ ADMIN_REORDER = (
                 )
      },
 
-    {'app': 'course', 'label': 'Course Assignments',
-     'models': ('course.Assignment',
-                # 'course.AssignmentProgress',
-                'course.Introduction',
-                'course.HousingAssignment',
-                'course.HousingItems',
-                'course.Transportation',
-                'course.TransportItems',
-                'course.ChildCare',
-                'course.ChildCareItems',
-                'course.GroceryAssignment',
-                'course.GroceryItems',
-                'course.LifeHappensAssignment',
-                'course.RestaurantAssignment',
-                'course.RestaurantsItems',
-                'course.CreditCardAssignment',
-                'course.Electronic',
-                'course.ElectronicItems',
-                # 'course.Clothing',
-                # 'course.ClothingItems',
-                'course.PersonalCare',
-                'course.PersonalCareItems',
-                'course.HomeFurnishing',
-                'course.HomeFurnishingItems',
-                'course.Entertainment',
-                'course.EntertainmentItems',
-
+    {'app': 'payments', 'label': 'Payments',
+     'models': ('payments.StripeCustomer',
                 )
      },
+
+    # {'app': 'course', 'label': 'Course Assignments',
+    #  'models': ('course.Assignment',
+    #             # 'course.AssignmentProgress',
+    #             'course.Introduction',
+    #             'course.HousingAssignment',
+    #             'course.HousingItems',
+    #             'course.Transportation',
+    #             'course.TransportItems',
+    #             'course.ChildCare',
+    #             'course.ChildCareItems',
+    #             'course.GroceryAssignment',
+    #             'course.GroceryItems',
+    #             'course.LifeHappensAssignment',
+    #             'course.RestaurantAssignment',
+    #             'course.RestaurantsItems',
+    #             'course.CreditCardAssignment',
+    #             'course.Electronic',
+    #             'course.ElectronicItems',
+    #             # 'course.Clothing',
+    #             # 'course.ClothingItems',
+    #             'course.PersonalCare',
+    #             'course.PersonalCareItems',
+    #             'course.HomeFurnishing',
+    #             'course.HomeFurnishingItems',
+    #             'course.Entertainment',
+    #             'course.EntertainmentItems',
+    #             )
+    #  },
 )
 
 if DEBUG:
@@ -289,6 +297,16 @@ ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 ACCOUNT_UNIQUE_EMAIL = True
 LOGIN_REDIRECT_URL = "users:redirect"
+
+# Stripe
+STRIPE_TEST_PUBLIC_KEY = env.str("STRIPE_TEST_PUBLIC_KEY")
+STRIPE_TEST_SECRET_KEY = env.str("STRIPE_TEST_SECRET_KEY")
+STRIPE_API_KEY = env.str('STRIPE_API_KEY')
+STRIPE_LIVE_PUBLIC_KEY = env.str("STRIPE_LIVE_PUBLIC_KEY")
+STRIPE_LIVE_SECRET_KEY = env.str("STRIPE_LIVE_SECRET_KEY")
+STRIPE_LIVE_MODE = env.bool("STRIPE_LIVE_MODE")
+DJSTRIPE_WEBHOOK_SECRET = env.str("DJSTRIPE_WEBHOOK_SECRET")  # Get it from the section in the Stripe dashboard where you added the webhook endpoint
+DJSTRIPE_FOREIGN_KEY_TO_FIELD = env.str("DJSTRIPE_FOREIGN_KEY_TO_FIELD")
 
 ACCOUNT_ADAPTER = "users.adapters.AccountAdapter"
 SOCIALACCOUNT_ADAPTER = "users.adapters.SocialAccountAdapter"

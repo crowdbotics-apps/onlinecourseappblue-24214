@@ -7,7 +7,8 @@ export default StyleSheet.create({
         paddingHorizontal: 22,
         paddingVertical: 15,
         borderRadius: 8,
-        marginBottom: 15
+        marginBottom: 15,
+        alignItems: 'center'
     },
     icon: {
         alignSelf: 'flex-end',

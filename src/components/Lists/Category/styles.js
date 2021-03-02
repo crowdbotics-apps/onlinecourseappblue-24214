@@ -16,7 +16,7 @@ export default StyleSheet.create({
     },
     categoryIcon: {
         fontSize: 36,
-        color: colors.biscay
+        color: colors.morningGlory
     },
     categoryText: {
         flex: 1,

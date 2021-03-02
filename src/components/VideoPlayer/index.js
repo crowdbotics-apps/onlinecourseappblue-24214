@@ -25,7 +25,7 @@ const VideoPlayer = ({ media, action }) => {
             {isLoading && (
                 <ActivityIndicator
                     size="large"
-                    color={colors.biscay}
+                    color={colors.morningGlory}
                     style={styles.loader}
                 />
             )}

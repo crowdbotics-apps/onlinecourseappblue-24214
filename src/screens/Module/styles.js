@@ -49,7 +49,7 @@ export default StyleSheet.create({
     labelStyle: {
         fontSize: 11,
         color: colors.black,
-        fontFamily: 'Gilroy-ExtraBold',
+        // fontFamily: 'Gilroy-ExtraBold',
         ...Platform.select({
             ios: {
                 fontWeight: 'bold'

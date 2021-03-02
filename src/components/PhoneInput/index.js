@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     },
     text: {
         color: colors.black,
-        fontFamily: 'Gilroy-ExtraBold',
+        // fontFamily: 'Gilroy-ExtraBold',
         ...Platform.select({
             ios: {
                 fontWeight: 'bold',

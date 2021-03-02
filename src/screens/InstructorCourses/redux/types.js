@@ -1,0 +1,8 @@
+export const GET_INSTRUCTOR_COURSES =
+    'OCA/InstructorCourses/GET_INSTRUCTOR_COURSES';
+export const GET_INSTRUCTOR_COURSES_SUCCESS =
+    'OCA/InstructorCourses/GET_INSTRUCTOR_COURSES_SUCCESS';
+export const GET_INSTRUCTOR_COURSES_FAILURE =
+    'OCA/InstructorCourses/GET_INSTRUCTOR_COURSES_FAILURE';
+
+export const RESET_DATA = 'OCA/InstructorCourses/RESET_DATA';

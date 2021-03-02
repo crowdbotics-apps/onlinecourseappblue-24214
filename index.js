@@ -30,20 +30,24 @@ PushNotification.configure({
             title,
             description,
             image,
+            author,
             author_name,
             author_image,
-            is_enrolled
+            is_enrolled,
+            subscription_status
         } = Platform.OS === 'android' ? JSON.parse(notification.data.course) : notification.data.course;
 
         !foreground &&
-            navigate('Module', {
+            navigate('CourseDetail', {
                 id,
                 title,
                 description,
                 image,
+                author_id: author,
                 author_name,
                 author_image,
                 is_enrolled,
+                subscription_status
             });
 
         // (required) Called when a remote is received or opened, or local notification is opened

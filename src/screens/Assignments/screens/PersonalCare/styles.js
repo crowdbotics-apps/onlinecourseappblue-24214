@@ -23,7 +23,7 @@ export default StyleSheet.create({
         backgroundColor: colors.pictonBlue
     },
     active: {
-        backgroundColor: colors.biscay
+        backgroundColor: colors.morningGlory
     },
     viewStyle: {
         padding: 5,
@@ -70,7 +70,7 @@ export default StyleSheet.create({
     },
     costColValue: {
         borderWidth: 1,
-        backgroundColor: colors.biscay
+        backgroundColor: colors.morningGlory
     },
     costColText: {
         margin: 3,

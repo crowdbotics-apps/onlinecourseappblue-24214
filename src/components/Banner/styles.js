@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 import colors from 'src/styles/colors';
 
 export default StyleSheet.create({
-    primary: { backgroundColor: colors.biscay },
+    primary: { backgroundColor: colors.morningGlory },
 
     info: {
         alignItems: 'center',
@@ -19,23 +19,12 @@ export default StyleSheet.create({
         marginTop: 7
     },
 
-    rangeText: {
-        marginLeft: 8
+    authorText: {
+        marginLeft: 5
     },
 
     text: {
         fontSize: 20,
         marginTop: 17
-    },
-
-    balance: {
-        width: '100%',
-        alignItems: 'flex-end'
-    },
-
-    balanceText: {
-        paddingHorizontal: 10,
-        paddingVertical: 2,
-        backgroundColor: 'white'
     }
 });

@@ -8,7 +8,7 @@ export default StyleSheet.create({
         marginVertical: 5
     },
     heading: {
-        backgroundColor: colors.biscay
+        backgroundColor: colors.morningGlory
     },
     table: {
         borderWidth: 1
@@ -19,12 +19,12 @@ export default StyleSheet.create({
     },
     text: {
         margin: 5,
-        color: colors.biscay,
+        color: colors.morningGlory,
         fontWeight: 'bold'
     },
     tableHeadText: {
         margin: 5,
-        color: colors.biscay,
+        color: colors.morningGlory,
         fontWeight: 'bold'
     }
 });

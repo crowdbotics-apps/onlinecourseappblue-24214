@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { StyleSheet, Image, ImageBackground } from "react-native";
+import { StyleSheet, Image, View } from "react-native";
 import AsyncStorage from '@react-native-community/async-storage';
+
+import colors from 'src/styles/colors';
 
 export default class SplashScreen extends Component {
   componentDidMount() {
@@ -21,13 +23,12 @@ export default class SplashScreen extends Component {
 
   render() {
     return (
-      <ImageBackground
-        source={require('../../assets/images/authBg.png')}
-        style={styles.container}
-      >
-        <Image source={require('../../assets/images/Elevate.png')} style={styles.logo} />
-        <Image source={require('../../assets/images/truesky-logo.png')} style={styles.trueSkyLogo} />
-      </ImageBackground>
+      <View style={styles.container}>
+        <Image
+          source={require('../../assets/images/Crowdbotics.png')}
+          style={styles.logo}
+        />
+      </View>
     );
   }
 }
@@ -39,7 +40,8 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     paddingHorizontal: 40,
     paddingVertical: 60,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: colors.morningGlory
   },
   logo: {
     flex: 1,

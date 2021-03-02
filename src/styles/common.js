@@ -2,9 +2,9 @@ import { StyleSheet, Platform } from 'react-native';
 import colors from './colors';
 
 export default StyleSheet.create({
-  authBgImage: {
+  authBg: {
     flex: 1,
-    resizeMode: 'cover'
+    backgroundColor: colors.morningGlory
   },
 
   authContainer: {
@@ -14,7 +14,6 @@ export default StyleSheet.create({
   },
 
   logo: {
-    height: 140,
     width: '100%',
     alignSelf: 'center',
     resizeMode: 'contain',
@@ -32,11 +31,20 @@ export default StyleSheet.create({
   },
   primaryIcons: { color: colors.white },
   secondaryIcons: { color: colors.doveGray },
-  tertiary: { color: colors.biscay },
+  tertiary: { color: colors.morningGlory },
 
   container: {
     paddingHorizontal: 22,
     backgroundColor: colors.whisper
+  },
+
+  containerMain: {
+    backgroundColor: colors.whisper
+  },
+
+  contentWrapper: {
+    flex: 1,
+    paddingHorizontal: 22
   },
 
   headingWrapper: {

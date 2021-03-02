@@ -2,7 +2,7 @@ import { StyleSheet, Platform } from 'react-native';
 import colors from 'src/styles/colors';
 
 export default StyleSheet.create({
-    primary: { backgroundColor: colors.biscay },
+    primary: { backgroundColor: colors.morningGlory },
 
     secondary: { backgroundColor: colors.white },
 
@@ -20,7 +20,7 @@ export default StyleSheet.create({
 
     titleText: {
         fontSize: 15,
-        fontFamily: 'Gilroy-Light'
+        // fontFamily: 'Gilroy-Light'
     },
 
     leftStyle: {
@@ -39,7 +39,7 @@ export default StyleSheet.create({
     },
 
     textTitle: {
-        fontFamily: 'Gilroy-ExtraBold',
+        // fontFamily: 'Gilroy-ExtraBold',
         ...Platform.select({
             ios: {
                 fontWeight: 'bold',

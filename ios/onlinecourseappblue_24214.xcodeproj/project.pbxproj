@@ -15,6 +15,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		15750E5F640B44D39FDA2C5F /* Merriweather-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D363A40D266F4A2F9DA43BBB /* Merriweather-BoldItalic.ttf */; };
 		16ADA8091A4C4AE985704520 /* CrimsonText-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA27BA82B6F54E6AA774837A /* CrimsonText-BoldItalic.ttf */; };
+		1BC05ADD7439E06734FA8848 /* libPods-onlinecourseappblue_24214.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 291A51E3DE34A46A299D1BDD /* libPods-onlinecourseappblue_24214.a */; };
 		1EC798CEC5E0404EA0D77387 /* PlayfairDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D0B923FF7A84803B644A739 /* PlayfairDisplay-Italic.ttf */; };
 		20322AB7DFF24C4EA511C256 /* Merriweather-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81DF4236A99D4A709ED2D261 /* Merriweather-Italic.ttf */; };
 		2511B32A63584791852AB44B /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0370C43804734F8989BE25EE /* OpenSans-Italic.ttf */; };
@@ -23,12 +24,10 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* onlinecourseappblue_24214Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* onlinecourseappblue_24214Tests.m */; };
-		2DED398435B070DFE53B3181 /* libPods-onlinecourseappblue_24214-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2A9E79A98C420228A1A8DD /* libPods-onlinecourseappblue_24214-tvOSTests.a */; };
 		321B955E9F4B438B8801785E /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E14FAA250F4E34BCB78BC9 /* OpenSans-BoldItalic.ttf */; };
 		3771B36D64884BF0A0B4DC91 /* RobotoMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C44ECF700E4544E587E93789 /* RobotoMono-BoldItalic.ttf */; };
 		381938E5484D4BE0A64756D0 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DACF422EB66C4A2E8C8F57CB /* Lato-Bold.ttf */; };
 		49219009619343CEADF8DA68 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E24F890818DA41B4BF35BE6B /* Montserrat-BoldItalic.ttf */; };
-		521B83366315E94FB3DD428C /* libPods-onlinecourseappblue_24214-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4461C2903188B585537A18A0 /* libPods-onlinecourseappblue_24214-tvOS.a */; };
 		523A8852C06F494284355BA7 /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4608F2B2D4EB4D0E8D6BD41F /* Nunito-BoldItalic.ttf */; };
 		533E4C0A25504B459E8225A6 /* CrimsonText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10678ED2081D4BFAAD1E0350 /* CrimsonText-Regular.ttf */; };
 		58F089169E9D4805B74B1C7E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AE16E3FA4AA46328F948328 /* Roboto-Bold.ttf */; };
@@ -39,16 +38,18 @@
 		7A2D223C5FED4F5FB3EE1239 /* RobotoMono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C2505F2B8134D1087D1CF98 /* RobotoMono-Italic.ttf */; };
 		7C7C1BF5450A46EDA0F19C60 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FBBF6F744FD4B71BB78E899 /* Roboto-Medium.ttf */; };
 		7E6799B24ECE4202BC4DA94D /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 491A4F07E9CA46AE9CD3670F /* Montserrat-Italic.ttf */; };
+		8120EA701AA384E0C299C81A /* libPods-onlinecourseappblue_24214-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB8937A8459677A4ACF8CC4 /* libPods-onlinecourseappblue_24214-tvOS.a */; };
 		851CEDED090B403084D35234 /* Merriweather-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D28C1D9EC34737B830ED7D /* Merriweather-Bold.ttf */; };
 		8F89F11A98E8444CADB837D6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64E33304149841A483F9B936 /* Roboto-Regular.ttf */; };
 		90A48A9F6FAD43D3A6FD95BB /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D86F7DB16EF4FFFB7E447B9 /* Roboto-Light.ttf */; };
+		92E2C81AA616C6EA51AE0F7A /* libPods-onlinecourseappblue_24214-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE96908CECFF8A2B2CE148FD /* libPods-onlinecourseappblue_24214-tvOSTests.a */; };
 		987A144D13A0464CA1669B92 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E004F5E506E341CD9D28AA4D /* Lato-BoldItalic.ttf */; };
 		9C5861C0EBCE400A88E9775C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E0614ABDCB84854B5AB51DE /* Montserrat-Regular.ttf */; };
 		A68852BE500B42678DDAE277 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAFF8687B67C4A2AA17C072D /* Roboto-Italic.ttf */; };
 		AC7EA0244E114B5B8EB401B0 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B7A594AB0CB4D12B02E2815 /* Roboto-BoldItalic.ttf */; };
 		B5BDF2F389B24F8EAF6EEB59 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54F1BA04FCED47AF89550842 /* Nunito-Bold.ttf */; };
 		B60B811922AD4DF1868ECA9E /* RobotoMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C269415E0FE346A19F799552 /* RobotoMono-Regular.ttf */; };
-		B6E902D286E5683523EAC33C /* libPods-onlinecourseappblue_24214.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC06A27FF3E19E848D6C896 /* libPods-onlinecourseappblue_24214.a */; };
+		BFB14BEBC336632797E8C346 /* libPods-onlinecourseappblue_24214Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9D882694016DFD123A2585 /* libPods-onlinecourseappblue_24214Tests.a */; };
 		C92AB2CD06384333AA1C058D /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0800C252345C44FFA7D16C67 /* Montserrat-Bold.ttf */; };
 		CCB1D492906B4B3D805A3DAD /* CrimsonText-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DF4C394DEAE411AB737460E /* CrimsonText-Italic.ttf */; };
 		D29256256E0E46B8B151D978 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AB618E2C4AE4F5F8CF4ED2D /* Lato-Italic.ttf */; };
@@ -57,7 +58,6 @@
 		D596CA0A25D57AEA005B4137 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D596CA0925D57AEA005B4137 /* GoogleService-Info.plist */; };
 		E3CFD1DEF67545E3AFDB79E5 /* PlayfairDisplay-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 676F20FD71214D9190326D50 /* PlayfairDisplay-BoldItalic.ttf */; };
 		E5E2C33491FA467E8F8AED08 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E0F655CC982417BA764CED1 /* Lato-Regular.ttf */; };
-		F2D50971E2F228FE9B5B7F21 /* libPods-onlinecourseappblue_24214Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E43D349C0A38286311903427 /* libPods-onlinecourseappblue_24214Tests.a */; };
 		FA8C1BD91F9A4FEFB4DBD6D3 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64AE690294094167971B822D /* OpenSans-Bold.ttf */; };
 		FAFDC64DA5E3424D9423ABB7 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD8D22C5F8C3459A8B557019 /* PlayfairDisplay-Bold.ttf */; };
 /* End PBXBuildFile section */
@@ -87,9 +87,7 @@
 		0370C43804734F8989BE25EE /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Italic.ttf"; path = "../src/assets/fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		0800C252345C44FFA7D16C67 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Bold.ttf"; path = "../src/assets/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		0FBBF6F744FD4B71BB78E899 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../src/assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		0FC06A27FF3E19E848D6C896 /* libPods-onlinecourseappblue_24214.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-onlinecourseappblue_24214.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10678ED2081D4BFAAD1E0350 /* CrimsonText-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CrimsonText-Regular.ttf"; path = "../src/assets/fonts/CrimsonText-Regular.ttf"; sourceTree = "<group>"; };
-		1233EF3817D298324AB4A77A /* Pods-onlinecourseappblue_24214Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214Tests.debug.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214Tests/Pods-onlinecourseappblue_24214Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		12D2B119D29F4CD588E6875F /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* onlinecourseappblue_24214.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onlinecourseappblue_24214.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = onlinecourseappblue_24214/AppDelegate.h; sourceTree = "<group>"; };
@@ -98,12 +96,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = onlinecourseappblue_24214/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = onlinecourseappblue_24214/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = onlinecourseappblue_24214/main.m; sourceTree = "<group>"; };
+		16533596DBC10C24191BD4F3 /* Pods-onlinecourseappblue_24214Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214Tests.release.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214Tests/Pods-onlinecourseappblue_24214Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1938E99EC00E44A6A3D4F8BE /* fontawesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = fontawesome.ttf; path = ../src/assets/fonts/fontawesome.ttf; sourceTree = "<group>"; };
 		1AE16E3FA4AA46328F948328 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../src/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		1BFB91A53479427A9BC43C91 /* RobotoMono-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoMono-Bold.ttf"; path = "../src/assets/fonts/RobotoMono-Bold.ttf"; sourceTree = "<group>"; };
+		1C5B25010E8951553EE3A3D7 /* Pods-onlinecourseappblue_24214-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214-tvOS.release.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214-tvOS/Pods-onlinecourseappblue_24214-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		205BAA2F038191E79A1174B2 /* Pods-onlinecourseappblue_24214.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214.release.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214/Pods-onlinecourseappblue_24214.release.xcconfig"; sourceTree = "<group>"; };
 		22B3817CF5CB45DC8D91DF5A /* CrimsonText-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CrimsonText-Bold.ttf"; path = "../src/assets/fonts/CrimsonText-Bold.ttf"; sourceTree = "<group>"; };
-		2817A7BA9DF977C701FE4972 /* Pods-onlinecourseappblue_24214.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214.release.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214/Pods-onlinecourseappblue_24214.release.xcconfig"; sourceTree = "<group>"; };
-		2B55C81226B85CDFB5BB6D95 /* Pods-onlinecourseappblue_24214-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214-tvOS/Pods-onlinecourseappblue_24214-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		291A51E3DE34A46A299D1BDD /* libPods-onlinecourseappblue_24214.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-onlinecourseappblue_24214.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* onlinecourseappblue_24214-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "onlinecourseappblue_24214-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* onlinecourseappblue_24214-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "onlinecourseappblue_24214-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		323F414BAD5F46D3B6E2E941 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-Regular.ttf"; path = "../src/assets/fonts/PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -111,12 +111,12 @@
 		33797F5CF3594F30B3F2F62C /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		3DF4C394DEAE411AB737460E /* CrimsonText-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CrimsonText-Italic.ttf"; path = "../src/assets/fonts/CrimsonText-Italic.ttf"; sourceTree = "<group>"; };
 		3E0F655CC982417BA764CED1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../src/assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
-		4461C2903188B585537A18A0 /* libPods-onlinecourseappblue_24214-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-onlinecourseappblue_24214-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4608F2B2D4EB4D0E8D6BD41F /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-BoldItalic.ttf"; path = "../src/assets/fonts/Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
 		476ECD69A65C4776AA1316DB /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		4796971FA510484EAB699358 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		48DC98A3B2A9418AB4085CB9 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		491A4F07E9CA46AE9CD3670F /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Italic.ttf"; path = "../src/assets/fonts/Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		4C4FAC12FF2D2F1A22B23BBA /* Pods-onlinecourseappblue_24214.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214.debug.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214/Pods-onlinecourseappblue_24214.debug.xcconfig"; sourceTree = "<group>"; };
 		4D86F7DB16EF4FFFB7E447B9 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		54F1BA04FCED47AF89550842 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../src/assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		5AA7C8E525C54993B40CB260 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
@@ -127,19 +127,19 @@
 		64AE690294094167971B822D /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Bold.ttf"; path = "../src/assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		64E33304149841A483F9B936 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		676F20FD71214D9190326D50 /* PlayfairDisplay-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-BoldItalic.ttf"; path = "../src/assets/fonts/PlayfairDisplay-BoldItalic.ttf"; sourceTree = "<group>"; };
-		6C22CE44BFAD7DB372B91665 /* Pods-onlinecourseappblue_24214.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214.debug.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214/Pods-onlinecourseappblue_24214.debug.xcconfig"; sourceTree = "<group>"; };
 		6D0B923FF7A84803B644A739 /* PlayfairDisplay-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-Italic.ttf"; path = "../src/assets/fonts/PlayfairDisplay-Italic.ttf"; sourceTree = "<group>"; };
 		6F1A06742E3B4455BF5AFAB3 /* icomoon.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = icomoon.ttf; path = ../src/assets/fonts/icomoon.ttf; sourceTree = "<group>"; };
-		6F503756001CEA18622C6318 /* Pods-onlinecourseappblue_24214-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214-tvOSTests/Pods-onlinecourseappblue_24214-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AB618E2C4AE4F5F8CF4ED2D /* Lato-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Italic.ttf"; path = "../src/assets/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
-		7B2A9E79A98C420228A1A8DD /* libPods-onlinecourseappblue_24214-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-onlinecourseappblue_24214-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81C5BA17274CD0E8C4A4BC12 /* Pods-onlinecourseappblue_24214Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214Tests.debug.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214Tests/Pods-onlinecourseappblue_24214Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		81DF4236A99D4A709ED2D261 /* Merriweather-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Italic.ttf"; path = "../src/assets/fonts/Merriweather-Italic.ttf"; sourceTree = "<group>"; };
 		8A10FA46CA214F2C8950A360 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		8FB8937A8459677A4ACF8CC4 /* libPods-onlinecourseappblue_24214-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-onlinecourseappblue_24214-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		947B2E52773C4C5789EA3DB2 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		9A2ECDC8B29B424EB5FF531B /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../src/assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		A8C265B6841F4B44A0C6B980 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
-		ACA9AF622F840E2DEC3FC383 /* Pods-onlinecourseappblue_24214Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214Tests.release.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214Tests/Pods-onlinecourseappblue_24214Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AA56438AB5214427C4300D83 /* Pods-onlinecourseappblue_24214-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214-tvOSTests/Pods-onlinecourseappblue_24214-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD8D22C5F8C3459A8B557019 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlayfairDisplay-Bold.ttf"; path = "../src/assets/fonts/PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		AD9D882694016DFD123A2585 /* libPods-onlinecourseappblue_24214Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-onlinecourseappblue_24214Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC5BBAEF506410CA25CDC01 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		B6A2E49B32DF422E96EBCC61 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		BA1E449253EB44BD849E664A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Regular.ttf"; path = "../src/assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -158,16 +158,16 @@
 		DEB7F9516140407291C96D71 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Regular.ttf"; path = "../src/assets/fonts/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
 		E004F5E506E341CD9D28AA4D /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/assets/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
 		E24F890818DA41B4BF35BE6B /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-BoldItalic.ttf"; path = "../src/assets/fonts/Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
-		E43D349C0A38286311903427 /* libPods-onlinecourseappblue_24214Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-onlinecourseappblue_24214Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E14FAA250F4E34BCB78BC9 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-BoldItalic.ttf"; path = "../src/assets/fonts/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		EB75528BBAD8BD25502059D6 /* Pods-onlinecourseappblue_24214-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214-tvOSTests/Pods-onlinecourseappblue_24214-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F13353BB4AA04F1799EE1E8E /* Righteous-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Righteous-Regular.ttf"; path = "../src/assets/fonts/Righteous-Regular.ttf"; sourceTree = "<group>"; };
-		F222A10639C539E3E5E13708 /* Pods-onlinecourseappblue_24214-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214-tvOSTests/Pods-onlinecourseappblue_24214-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		F2D28C1D9EC34737B830ED7D /* Merriweather-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Bold.ttf"; path = "../src/assets/fonts/Merriweather-Bold.ttf"; sourceTree = "<group>"; };
+		F441CAE9629B72DA3BB9AD74 /* Pods-onlinecourseappblue_24214-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214-tvOS/Pods-onlinecourseappblue_24214-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F4896057A7874236B24D7425 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Italic.ttf"; path = "../src/assets/fonts/Nunito-Italic.ttf"; sourceTree = "<group>"; };
-		F498B34C0C844F63503FCFFB /* Pods-onlinecourseappblue_24214-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onlinecourseappblue_24214-tvOS.release.xcconfig"; path = "Target Support Files/Pods-onlinecourseappblue_24214-tvOS/Pods-onlinecourseappblue_24214-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		FA27BA82B6F54E6AA774837A /* CrimsonText-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CrimsonText-BoldItalic.ttf"; path = "../src/assets/fonts/CrimsonText-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FE96908CECFF8A2B2CE148FD /* libPods-onlinecourseappblue_24214-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-onlinecourseappblue_24214-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2D50971E2F228FE9B5B7F21 /* libPods-onlinecourseappblue_24214Tests.a in Frameworks */,
+				BFB14BEBC336632797E8C346 /* libPods-onlinecourseappblue_24214Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E902D286E5683523EAC33C /* libPods-onlinecourseappblue_24214.a in Frameworks */,
+				1BC05ADD7439E06734FA8848 /* libPods-onlinecourseappblue_24214.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521B83366315E94FB3DD428C /* libPods-onlinecourseappblue_24214-tvOS.a in Frameworks */,
+				8120EA701AA384E0C299C81A /* libPods-onlinecourseappblue_24214-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DED398435B070DFE53B3181 /* libPods-onlinecourseappblue_24214-tvOSTests.a in Frameworks */,
+				92E2C81AA616C6EA51AE0F7A /* libPods-onlinecourseappblue_24214-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,10 +243,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				0FC06A27FF3E19E848D6C896 /* libPods-onlinecourseappblue_24214.a */,
-				4461C2903188B585537A18A0 /* libPods-onlinecourseappblue_24214-tvOS.a */,
-				7B2A9E79A98C420228A1A8DD /* libPods-onlinecourseappblue_24214-tvOSTests.a */,
-				E43D349C0A38286311903427 /* libPods-onlinecourseappblue_24214Tests.a */,
+				291A51E3DE34A46A299D1BDD /* libPods-onlinecourseappblue_24214.a */,
+				8FB8937A8459677A4ACF8CC4 /* libPods-onlinecourseappblue_24214-tvOS.a */,
+				FE96908CECFF8A2B2CE148FD /* libPods-onlinecourseappblue_24214-tvOSTests.a */,
+				AD9D882694016DFD123A2585 /* libPods-onlinecourseappblue_24214Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,14 +291,14 @@
 		AA3F11E466B2FBD805C8C9CA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6C22CE44BFAD7DB372B91665 /* Pods-onlinecourseappblue_24214.debug.xcconfig */,
-				2817A7BA9DF977C701FE4972 /* Pods-onlinecourseappblue_24214.release.xcconfig */,
-				2B55C81226B85CDFB5BB6D95 /* Pods-onlinecourseappblue_24214-tvOS.debug.xcconfig */,
-				F498B34C0C844F63503FCFFB /* Pods-onlinecourseappblue_24214-tvOS.release.xcconfig */,
-				6F503756001CEA18622C6318 /* Pods-onlinecourseappblue_24214-tvOSTests.debug.xcconfig */,
-				F222A10639C539E3E5E13708 /* Pods-onlinecourseappblue_24214-tvOSTests.release.xcconfig */,
-				1233EF3817D298324AB4A77A /* Pods-onlinecourseappblue_24214Tests.debug.xcconfig */,
-				ACA9AF622F840E2DEC3FC383 /* Pods-onlinecourseappblue_24214Tests.release.xcconfig */,
+				4C4FAC12FF2D2F1A22B23BBA /* Pods-onlinecourseappblue_24214.debug.xcconfig */,
+				205BAA2F038191E79A1174B2 /* Pods-onlinecourseappblue_24214.release.xcconfig */,
+				F441CAE9629B72DA3BB9AD74 /* Pods-onlinecourseappblue_24214-tvOS.debug.xcconfig */,
+				1C5B25010E8951553EE3A3D7 /* Pods-onlinecourseappblue_24214-tvOS.release.xcconfig */,
+				AA56438AB5214427C4300D83 /* Pods-onlinecourseappblue_24214-tvOSTests.debug.xcconfig */,
+				EB75528BBAD8BD25502059D6 /* Pods-onlinecourseappblue_24214-tvOSTests.release.xcconfig */,
+				81C5BA17274CD0E8C4A4BC12 /* Pods-onlinecourseappblue_24214Tests.debug.xcconfig */,
+				16533596DBC10C24191BD4F3 /* Pods-onlinecourseappblue_24214Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -374,7 +374,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "onlinecourseappblue_24214Tests" */;
 			buildPhases = (
-				8C7FB16310F87AAD6E494CB2 /* [CP] Check Pods Manifest.lock */,
+				9ECD78DA13222EAEF4956AB8 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -393,13 +393,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "onlinecourseappblue_24214" */;
 			buildPhases = (
-				DC62188E08C4F74B4B61B714 /* [CP] Check Pods Manifest.lock */,
+				26DACE107087715736EF60C4 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				B586B608BB3C4F1586105A27 /* [CP] Copy Pods Resources */,
+				21508FF4894F80941AE03043 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -414,7 +414,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "onlinecourseappblue_24214-tvOS" */;
 			buildPhases = (
-				C3D57CC943043658BF0CABC1 /* [CP] Check Pods Manifest.lock */,
+				531211BE2F9D977BE494F870 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -434,7 +434,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "onlinecourseappblue_24214-tvOSTests" */;
 			buildPhases = (
-				04107637584F6B4335011DEE /* [CP] Check Pods Manifest.lock */,
+				95A70F733033B09CB004E4FE /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -592,65 +592,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		04107637584F6B4335011DEE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-onlinecourseappblue_24214-tvOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		8C7FB16310F87AAD6E494CB2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-onlinecourseappblue_24214Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B586B608BB3C4F1586105A27 /* [CP] Copy Pods Resources */ = {
+		21508FF4894F80941AE03043 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -702,7 +644,43 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-onlinecourseappblue_24214/Pods-onlinecourseappblue_24214-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C3D57CC943043658BF0CABC1 /* [CP] Check Pods Manifest.lock */ = {
+		26DACE107087715736EF60C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-onlinecourseappblue_24214-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		531211BE2F9D977BE494F870 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -724,7 +702,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DC62188E08C4F74B4B61B714 /* [CP] Check Pods Manifest.lock */ = {
+		95A70F733033B09CB004E4FE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -739,7 +717,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-onlinecourseappblue_24214-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-onlinecourseappblue_24214-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ECD78DA13222EAEF4956AB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-onlinecourseappblue_24214Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -852,7 +852,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1233EF3817D298324AB4A77A /* Pods-onlinecourseappblue_24214Tests.debug.xcconfig */;
+			baseConfigurationReference = 81C5BA17274CD0E8C4A4BC12 /* Pods-onlinecourseappblue_24214Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -879,7 +879,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACA9AF622F840E2DEC3FC383 /* Pods-onlinecourseappblue_24214Tests.release.xcconfig */;
+			baseConfigurationReference = 16533596DBC10C24191BD4F3 /* Pods-onlinecourseappblue_24214Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -903,7 +903,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C22CE44BFAD7DB372B91665 /* Pods-onlinecourseappblue_24214.debug.xcconfig */;
+			baseConfigurationReference = 4C4FAC12FF2D2F1A22B23BBA /* Pods-onlinecourseappblue_24214.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
@@ -936,7 +936,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2817A7BA9DF977C701FE4972 /* Pods-onlinecourseappblue_24214.release.xcconfig */;
+			baseConfigurationReference = 205BAA2F038191E79A1174B2 /* Pods-onlinecourseappblue_24214.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
@@ -963,7 +963,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B55C81226B85CDFB5BB6D95 /* Pods-onlinecourseappblue_24214-tvOS.debug.xcconfig */;
+			baseConfigurationReference = F441CAE9629B72DA3BB9AD74 /* Pods-onlinecourseappblue_24214-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -994,7 +994,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F498B34C0C844F63503FCFFB /* Pods-onlinecourseappblue_24214-tvOS.release.xcconfig */;
+			baseConfigurationReference = 1C5B25010E8951553EE3A3D7 /* Pods-onlinecourseappblue_24214-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1025,7 +1025,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F503756001CEA18622C6318 /* Pods-onlinecourseappblue_24214-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = AA56438AB5214427C4300D83 /* Pods-onlinecourseappblue_24214-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1055,7 +1055,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F222A10639C539E3E5E13708 /* Pods-onlinecourseappblue_24214-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = EB75528BBAD8BD25502059D6 /* Pods-onlinecourseappblue_24214-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

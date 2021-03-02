@@ -26,6 +26,9 @@ import UpdateProfileOTP from 'src/screens/Profile/screens/OTP';
 import UpdatePassword from 'src/screens/Profile/screens/UpdatePassword';
 import Notifications from 'src/screens/Notifications';
 import Settings from 'src/screens/Settings';
+import UpdateSettings from 'src/screens/Settings/screens/UpdateSettings';
+import UpdateSubscription from 'src/screens/Subscription/screens/UpdateSubscription';
+import AddCard from 'src/screens/Subscription/screens/AddCard';
 
 const mainStack = createStackNavigator();
 
@@ -53,10 +56,14 @@ const MainStackScreen = () => (
         <mainStack.Screen name="Subscription" component={Subscription} />
         <mainStack.Screen name="LessonDetail" component={LessonDetail} />
         <mainStack.Screen name="Assignments" component={Assignments} />
-        <mainStack.Screen name="Success" component={Success} />
-        <mainStack.Screen name="Failure" component={Failure} />
         <mainStack.Screen name="Notifications" component={Notifications} />
         <mainStack.Screen name="Settings" component={Settings} />
+        <mainStack.Screen name="UpdateSettings" component={UpdateSettings} />
+        <mainStack.Screen name="AddCard" component={AddCard} />
+        <mainStack.Screen
+            name="UpdateSubscription"
+            component={UpdateSubscription}
+        />
     </mainStack.Navigator>
 );
 

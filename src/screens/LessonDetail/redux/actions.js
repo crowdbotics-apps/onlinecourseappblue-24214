@@ -4,10 +4,12 @@ import {
     RESET
 } from './types';
 
-export const updateLessonProgress = (data, moduleIds) => ({
+export const updateLessonProgress = (data, courseId, moduleId, isLast) => ({
     type: UPDATE_LESSON_PROGRESS,
     data,
-    moduleIds,
+    courseId,
+    moduleId,
+    isLast
 })
 
 export const updateLessonProgressSuccess = () => ({

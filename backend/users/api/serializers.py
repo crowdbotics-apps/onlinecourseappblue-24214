@@ -17,6 +17,7 @@ from rest_framework.validators import UniqueValidator
 from phone_verification.models import PhoneVerification, PhoneVerificationKey
 from phone_verification.utils import recreate_new_user_key, send_email_key_on_profile_update
 from users.field import Base64ImageField
+from users.models import UserSettings
 
 User = get_user_model()
 
@@ -51,7 +52,7 @@ class UserVerificationSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'name', 'email', 'phone_number', 'image', 'country_dial_code', 'country_code')
+        fields = ('id', 'name', 'email', 'phone_number', 'image', 'country_dial_code', 'country_code', 'subscription_plan')
 
 
 class SendAskedQuestionEmailSerializer(serializers.Serializer):
@@ -168,3 +169,9 @@ class TokenSerializer(UserSerializer):
 
 class OnlineLoginSerializer(LoginSerializer):
     image = serializers.ImageField(required=False, allow_null=True)
+
+
+class UserSettingsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserSettings
+        fields = ('id', 'suggest_class', 'industry', 'download_quality', 'video_quality')

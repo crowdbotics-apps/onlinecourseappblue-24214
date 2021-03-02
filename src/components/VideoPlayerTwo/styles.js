@@ -12,12 +12,12 @@ export default StyleSheet.create({
     },
     text: {
         color: Colors.black,
-        fontFamily: 'Gilroy-ExtraBold',
+        // fontFamily: 'Gilroy-ExtraBold',
         height: 40,
     },
     transparentInput: {
         backgroundColor: 'transparent',
-        borderColor: Colors.biscay,
+        borderColor: Colors.morningGlory,
         color: Colors.white,
         marginHorizontal: 0
     },

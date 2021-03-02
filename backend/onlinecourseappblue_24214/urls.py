@@ -47,6 +47,8 @@ urlpatterns = [
     url('^register-by-token/(?P<backend>[^/]+)/$', register_by_access_token),
     path('auth/', include('social_django.urls', namespace='social')),
     path('grappelli/', include('grappelli.urls')),
+    path("stripe/", include("djstripe.urls", namespace="djstripe")),
+    path("payments/", include('payments.urls'))
 ]
 
 admin.site.site_header = "OnlineCourseAppBP"

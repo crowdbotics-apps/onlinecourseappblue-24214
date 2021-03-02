@@ -13,11 +13,14 @@ RUN apt-get update \
 
 WORKDIR /opt/webapp
 COPY . .
-RUN pip3 install --no-cache-dir -q 'pipenv==2018.11.26' && pipenv install --deploy --system
+RUN python3 -m pip install -U pip
+RUN python3 -m pip install -U setuptools
+RUN pip3 install --no-cache-dir -q 'pipenv==2018.11.26' && pipenv install --deploy --system --sequential
+
 RUN python3 manage.py collectstatic --no-input
 
 # Run the image as a non-root user
 RUN adduser --disabled-password --gecos "" django
 USER django
 # Run the web server on port $PORT
-CMD waitress-serve --port=$PORT onlinecourseappblue_15214.wsgi:application
+CMD waitress-serve --port=$PORT onlinecourseappblue_24214.wsgi:application

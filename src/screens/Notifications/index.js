@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { TouchableOpacity, FlatList, ActivityIndicator } from 'react-native';
-import { Container, Content, Icon } from 'native-base';
+import { TouchableOpacity, FlatList, View, ActivityIndicator } from 'react-native';
 import {
     Header,
+    Footer,
     BackIcon,
     Notification,
     DataAvailability
@@ -32,7 +32,10 @@ const Notifications = props => {
         return () => props.resetPage();
     }, []);
 
-    const { container, icon, dataWrapper } = styles;
+    const {
+        container,
+        dataWrapper
+    } = styles;
 
     const onPressCourse = notification => {
         const id = notification.id;
@@ -40,14 +43,16 @@ const Notifications = props => {
         !seenIds.includes(id) && updateSeenIds(seenIds.concat(id));
 
         props.updateNotification(id);
-        props.navigation.navigate('Module', {
+        props.navigation.navigate('CourseDetail', {
             id: course.id,
             title: course.title,
             description: course.description,
             image: course.image,
+            author_id: course.author,
             author_name: course.author_name,
             author_image: course.author_image,
-            is_enrolled: course.is_enrolled
+            is_enrolled: course.is_enrolled,
+            subscription_status: course.subscription_status
         });
     };
 
@@ -81,7 +86,7 @@ const Notifications = props => {
             //     </TouchableOpacity>
             // }
             />
-            <Container style={container}>
+            <View style={container}>
                 <DataAvailability
                     requesting={requesting && !notifications}
                     hasData={Boolean(notifications)}
@@ -89,7 +94,7 @@ const Notifications = props => {
                 >
                     {notifications &&
                         <FlatList
-                            keyExtractor={item => item.id}
+                            keyExtractor={item => item.id.toString()}
                             onEndReached={loadMore}
                             onEndReachedThreshold={0.1}
                             data={notifications}
@@ -99,7 +104,8 @@ const Notifications = props => {
                         />
                     }
                 </DataAvailability>
-            </Container>
+            </View>
+            <Footer props={props} activeScreen="Notifications" />
         </>
     );
 };

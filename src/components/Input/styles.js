@@ -11,7 +11,7 @@ export default StyleSheet.create({
     },
     text: {
         color: Colors.black,
-        fontFamily: 'Gilroy-ExtraBold',
+        // fontFamily: 'Gilroy-ExtraBold',
         ...Platform.select({
             ios: {
                 fontWeight: 'bold',
@@ -23,7 +23,7 @@ export default StyleSheet.create({
     },
     transparentInput: {
         backgroundColor: 'transparent',
-        borderColor: Colors.biscay,
+        borderColor: Colors.morningGlory,
         color: Colors.white,
         marginHorizontal: 0
     },

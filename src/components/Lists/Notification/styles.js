@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 import colors from 'src/styles/colors';
 
 export default StyleSheet.create({
-    primary: { color: colors.biscay },
+    primary: { color: colors.morningGlory },
     secondary: { color: colors.deco },
     tertiary: { color: colors.deepBlush },
 

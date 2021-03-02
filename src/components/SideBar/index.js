@@ -21,12 +21,12 @@ import colors from 'src/styles/colors';
 
 const routes = [
     { name: 'Home', route: 'Home', icon: 'home' },
-    // { name: 'Subscription', route: 'Subscription', icon: 'credit-card' },
+    { name: 'Subscription', route: 'Subscription', icon: 'credit-card' },
     { name: 'Notifications', route: 'Notifications', icon: 'notifications' },
-    { name: 'Profile', route: 'Profile', icon: 'person', },
-    // { name: 'Settings', route: 'Settings', icon: 'settings' },
+    { name: 'Profile', route: 'Profile', icon: 'person' },
     { name: 'My Courses', route: 'MyCourses', icon: 'star-border' },
-    { name: 'Search', route: 'Search', icon: 'search' }
+    { name: 'Search', route: 'Search', icon: 'search' },
+    { name: 'Settings', route: 'Settings', icon: 'settings' }
 ];
 
 class SideBar extends React.Component {
@@ -112,12 +112,12 @@ const styles = StyleSheet.create({
         paddingBottom: 27,
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: colors.biscay,
+        backgroundColor: colors.morningGlory
     },
     back: {
         fontSize: 40,
         color: colors.white,
-        marginHorizontal: 10,
+        marginHorizontal: 10
     },
     userInfo: {
         flex: 1,
@@ -138,14 +138,14 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     menuIcon: {
-        color: colors.biscay,
-        marginHorizontal: 15,
+        color: colors.morningGlory,
+        marginHorizontal: 15
     },
     badge: {
         marginLeft: 10
     },
     routeName: {
-        fontSize: 17,
+        fontSize: 17
     },
 
     logout: {
@@ -160,13 +160,13 @@ const styles = StyleSheet.create({
     }
 });
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
     user: state.app.user,
-    notifications: state.app.notifications,
+    notifications: state.app.notifications
 });
 
-const mapDispatchToProps = dispatch => ({
-    logout: () => dispatch(logoutAction()),
+const mapDispatchToProps = (dispatch) => ({
+    logout: () => dispatch(logoutAction())
 });
 
 export default connect(

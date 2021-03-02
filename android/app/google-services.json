@@ -29,6 +29,13 @@
             {
               "client_id": "551811006786-lr829pkgs11ev2hlo9ua5sdseth49h0f.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "551811006786-2g35mj10795k31n0diabj2rrup6lt732.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.onlinecourseappblue-24214"
+              }
             }
           ]
         }

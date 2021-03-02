@@ -22,7 +22,7 @@ export default StyleSheet.create({
     leftIcon: {
         fontSize: 25,
         marginRight: 21,
-        color: colors.biscay
+        color: colors.morningGlory
     },
 
     rightItem: {
