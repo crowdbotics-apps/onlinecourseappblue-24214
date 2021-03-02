@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 // styles
 import colors from 'src/styles/colors';
@@ -28,5 +28,14 @@ export default StyleSheet.create({
   },
   dataWrapper: {
     paddingVertical: 100
+  },
+  radioWrapper: {
+    ...Platform.select({
+      ios: {
+        borderWidth: 1,
+        borderRadius: 20,
+        borderColor: colors.black
+      }
+    })
   }
 });

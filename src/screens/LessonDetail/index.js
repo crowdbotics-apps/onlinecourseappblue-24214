@@ -41,8 +41,6 @@ const LessonDetail = props => {
 
     useEffect(() => {
         props.reset();
-        // to remove
-        updateProgress();
     }, []);
 
     const updateProgress = () => {

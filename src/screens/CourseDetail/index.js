@@ -126,10 +126,12 @@ const CourseDetail = props => {
                     />
                 }
                 left={<BackIcon action={() => navigation.goBack()} />}
-                right={<SearchIcon
-                    action={() => onPressSearch()}
-                    name={searchInput ? 'times-circle' : 'search'}
-                />}
+                right={is_enrolled || isEnrolled &&
+                    <SearchIcon
+                        action={() => onPressSearch()}
+                        name={searchInput ? 'times-circle' : 'search'}
+                    />
+                }
             />
             <Banner
                 color="primary"

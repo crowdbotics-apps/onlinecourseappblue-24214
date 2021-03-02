@@ -60,12 +60,14 @@ const UpdateSubscription = props => {
                     category="s1"
                     style={styles.item}
                   />
-                  <RadioButton
-                    status={selectedPlan === item.id ? 'checked' : 'unchecked'}
-                    color={colors.morningGlory}
-                    uncheckedColor={colors.doveGray}
-                    onPress={() => setSelectedPlan(item.id)}
-                  />
+                  <View style={styles.radioWrapper}>
+                    <RadioButton
+                      status={selectedPlan === item.id ? 'checked' : 'unchecked'}
+                      color={colors.morningGlory}
+                      uncheckedColor={colors.doveGray}
+                      onPress={() => setSelectedPlan(item.id)}
+                    />
+                  </View>
                 </View>
               ))}
           </DataAvailability>

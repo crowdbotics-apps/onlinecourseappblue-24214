@@ -299,14 +299,14 @@ ACCOUNT_UNIQUE_EMAIL = True
 LOGIN_REDIRECT_URL = "users:redirect"
 
 # Stripe
-STRIPE_TEST_PUBLIC_KEY = env.str("STRIPE_TEST_PUBLIC_KEY")
-STRIPE_TEST_SECRET_KEY = env.str("STRIPE_TEST_SECRET_KEY")
-STRIPE_API_KEY = env.str('STRIPE_API_KEY')
-STRIPE_LIVE_PUBLIC_KEY = env.str("STRIPE_LIVE_PUBLIC_KEY")
-STRIPE_LIVE_SECRET_KEY = env.str("STRIPE_LIVE_SECRET_KEY")
-STRIPE_LIVE_MODE = env.bool("STRIPE_LIVE_MODE")
-DJSTRIPE_WEBHOOK_SECRET = env.str("DJSTRIPE_WEBHOOK_SECRET")  # Get it from the section in the Stripe dashboard where you added the webhook endpoint
-DJSTRIPE_FOREIGN_KEY_TO_FIELD = env.str("DJSTRIPE_FOREIGN_KEY_TO_FIELD")
+STRIPE_TEST_PUBLIC_KEY = env.str("STRIPE_TEST_PUBLIC_KEY", "")
+STRIPE_TEST_SECRET_KEY = env.str("STRIPE_TEST_SECRET_KEY", "")
+STRIPE_API_KEY = env.str('STRIPE_API_KEY', "")
+STRIPE_LIVE_PUBLIC_KEY = env.str("STRIPE_LIVE_PUBLIC_KEY", "")
+STRIPE_LIVE_SECRET_KEY = env.str("STRIPE_LIVE_SECRET_KEY", "")
+STRIPE_LIVE_MODE = env.bool("STRIPE_LIVE_MODE", "")
+DJSTRIPE_WEBHOOK_SECRET = env.str("DJSTRIPE_WEBHOOK_SECRET", "")  # Get it from the section in the Stripe dashboard where you added the webhook endpoint
+DJSTRIPE_FOREIGN_KEY_TO_FIELD = env.str("DJSTRIPE_FOREIGN_KEY_TO_FIELD", "")
 
 ACCOUNT_ADAPTER = "users.adapters.AccountAdapter"
 SOCIALACCOUNT_ADAPTER = "users.adapters.SocialAccountAdapter"

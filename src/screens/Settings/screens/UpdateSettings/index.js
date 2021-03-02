@@ -87,12 +87,14 @@ const UpdateSettings = props => {
             return (
               <View key={item.value} style={styles.itemWrapper}>
                 <Text text={item.title} category="s1" style={styles.item} />
-                <RadioButton
-                  status={industryType === item.value ? 'checked' : 'unchecked'}
-                  color={colors.morningGlory}
-                  uncheckedColor={colors.doveGray}
-                  onPress={() => setIndustryType(item.value)}
-                />
+                <View style={styles.radioWrapper}>
+                  <RadioButton
+                    status={industryType === item.value ? 'checked' : 'unchecked'}
+                    color={colors.morningGlory}
+                    uncheckedColor={colors.doveGray}
+                    onPress={() => setIndustryType(item.value)}
+                  />
+                </View>
                 {/* <Checkbox.Item
                   style={{ marginRight: -16 }}
                   status={industry === item.value ? 'checked' : 'unchecked'}
@@ -132,12 +134,14 @@ const UpdateSettings = props => {
             return (
               <View key={item.value} style={styles.itemWrapper}>
                 <Text text={item.title} category="s1" style={styles.item} />
-                <RadioButton
-                  status={videoType === item.value ? 'checked' : 'unchecked'}
-                  color={colors.morningGlory}
-                  uncheckedColor={colors.doveGray}
-                  onPress={() => setVideoType(item.value)}
-                />
+                <View style={styles.radioWrapper}>
+                  <RadioButton
+                    status={videoType === item.value ? 'checked' : 'unchecked'}
+                    color={colors.morningGlory}
+                    uncheckedColor={colors.doveGray}
+                    onPress={() => setVideoType(item.value)}
+                  />
+                </View>
               </View>
             );
           })}

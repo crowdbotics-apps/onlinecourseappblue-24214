@@ -1,4 +1,7 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
+
+// styles
+import colors from 'src/styles/colors';
 
 export default StyleSheet.create({
   container: {
@@ -18,5 +21,14 @@ export default StyleSheet.create({
   },
   button: {
     marginTop: 20
+  },
+  radioWrapper: {
+    ...Platform.select({
+      ios: {
+        borderWidth: 1,
+        borderRadius: 20,
+        borderColor: colors.black
+      }
+    })
   }
 });
