@@ -340,7 +340,7 @@ FCM_DJANGO_SETTINGS = {
     "DELETE_INACTIVE_DEVICES": False,
 }
 
-APNS_AUTH_KEY_PATH = BASE_DIR + '/' + 'onlinecourseappblue_24214/' + 'PushCert_SW9W43D28U.p8'
+APNS_AUTH_KEY_PATH = BASE_DIR + '/' + 'onlinecourseappblue_24214/' + 'PushCert_ SW9W43D28U.p8'
 
 PUSH_NOTIFICATIONS_SETTINGS = {
     "FCM_API_KEY":  env.str("FCM_SERVER_KEY", ""),
