@@ -21,7 +21,7 @@ RUN pip3 install --no-cache-dir -q 'pipenv==2018.11.26' && pipenv install --depl
 RUN python3 manage.py collectstatic --no-input
 
 # Run the image as a non-root user
-# RUN adduser --disabled-password --gecos "" django
-# USER django
+RUN adduser --disabled-password --gecos "" django
+USER django
 # Run the web server on port $PORT
 CMD waitress-serve --port=$PORT onlinecourseappblue_24214.wsgi:application
