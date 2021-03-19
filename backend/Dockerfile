@@ -7,16 +7,13 @@ ARG SECRET_KEY
 
 # libpq-dev and python3-dev help with psycopg2
 RUN apt-get update \
-  && apt-get install -y python3.7-dev python3-pip libpq-dev curl ffmpeg\
+  && apt-get install -y python3.7-dev python3-pip libpq-dev curl ffmpeg libssl-dev libffi-dev\
   && apt-get clean all \
   && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/webapp
 COPY . .
-RUN python3 -m pip install -U pip
-RUN python3 -m pip install -U setuptools
-RUN pip3 install numpy
-RUN pip3 install --no-cache-dir -q 'pipenv==2018.11.26' && pipenv install --deploy --system --sequential
+RUN pip3 install --no-cache-dir -q 'pipenv==2018.11.26' && pipenv install numpy && pipenv install --deploy --system
 
 RUN python3 manage.py collectstatic --no-input
 
