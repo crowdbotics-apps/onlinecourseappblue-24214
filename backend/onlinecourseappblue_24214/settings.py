@@ -47,14 +47,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     "django_filters",
-    "course.apps.CourseConfig",
-    "payments.apps.PaymentsConfig",
 ]
 LOCAL_APPS = [
     'home',
     'users.apps.UsersConfig',
     'phone_verification',
     'notifications.apps.NotificationsConfig',
+    "course.apps.CourseConfig",
+    "payments.apps.PaymentsConfig",
 ]
 THIRD_PARTY_APPS = [
     "rest_framework",
